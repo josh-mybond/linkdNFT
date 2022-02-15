@@ -943,3 +943,150 @@ Started GET "/js/scripts.js" for ::1 at 2022-02-15 18:07:26 +1100
   
 ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
   
+Started GET "/" for ::1 at 2022-02-15 18:10:49 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/josh/.asdf/installs/ruby/3.0.3/lib/ruby/gems/3.0.0/gems/railties-7.0.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/josh/.asdf/installs/ruby/3.0.3/lib/ruby/gems/3.0.0/gems/railties-7.0.2.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | Allocations: 733)
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 6430)
+
+
+Started GET "/indices" for ::1 at 2022-02-15 18:10:53 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 81.3ms | Allocations: 57195)
+  Rendered layout layouts/application.html.erb (Duration: 91.5ms | Allocations: 82647)
+Completed 200 OK in 98ms (Views: 93.8ms | ActiveRecord: 0.0ms | Allocations: 84768)
+
+
+Started GET "/js/jquery-3.1.1.min.js" for ::1 at 2022-02-15 18:10:53 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/jquery-3.1.1.min.js"):
+  
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-15 18:10:53 +1100
+Started GET "/js/parallax.js" for ::1 at 2022-02-15 18:10:53 +1100
+Started GET "/js/scripts.js" for ::1 at 2022-02-15 18:10:53 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/parallax.js"):
+  
+Started GET "/stack" for ::1 at 2022-02-15 18:10:53 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/stack"):
+  
+Started GET "/fonts/stack-interface.woff2?33839631" for ::1 at 2022-02-15 18:10:53 +1100
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-15 18:10:54 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/stack-interface.woff2"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/stack-interface.woff?33839631" for ::1 at 2022-02-15 18:10:54 +1100
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-15 18:10:54 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/stack-interface.woff"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started GET "/fonts/stack-interface.ttf?33839631" for ::1 at 2022-02-15 18:10:54 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/stack-interface.ttf"):
+  
+Started GET "/img/logo-light.png" for ::1 at 2022-02-15 18:10:54 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/indices" for ::1 at 2022-02-15 18:11:34 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2877)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 13410)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.0ms | Allocations: 14619)
+
+
+Started GET "/js/jquery-3.1.1.min.js" for ::1 at 2022-02-15 18:11:35 +1100
+Started GET "/img/logo-light.png" for ::1 at 2022-02-15 18:11:35 +1100
+Started GET "/js/scripts.js" for ::1 at 2022-02-15 18:11:35 +1100
+Started GET "/js/parallax.js" for ::1 at 2022-02-15 18:11:35 +1100
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-15 18:11:35 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/jquery-3.1.1.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/parallax.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-15 18:11:35 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+Started GET "/js/scripts.js" for ::1 at 2022-02-15 18:11:35 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-15 18:11:35 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-15 18:11:35 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started GET "/indices" for ::1 at 2022-02-15 18:11:44 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2877)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 13419)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 14626)
+
+
+Started GET "/js/jquery-3.1.1.min.js" for ::1 at 2022-02-15 18:11:44 +1100
+Started GET "/img/logo-light.png" for ::1 at 2022-02-15 18:11:44 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/jquery-3.1.1.min.js"):
+  
+Started GET "/js/parallax.js" for ::1 at 2022-02-15 18:11:44 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/js/scripts.js" for ::1 at 2022-02-15 18:11:44 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/parallax.js"):
+  
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-15 18:11:44 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-15 18:11:44 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/js/scripts.js" for ::1 at 2022-02-15 18:11:44 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-15 18:11:44 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
