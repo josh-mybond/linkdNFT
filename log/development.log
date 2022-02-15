@@ -1272,3 +1272,978 @@ Started GET "/js/scripts.js" for ::1 at 2022-02-15 18:15:24 +1100
   
 ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
   
+Started GET "/" for ::1 at 2022-02-15 21:18:20 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 94.9ms | Allocations: 38802)
+  Rendered layout layouts/application.html.erb (Duration: 118.2ms | Allocations: 64441)
+Completed 200 OK in 126ms (Views: 120.3ms | ActiveRecord: 0.0ms | Allocations: 71112)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-15 21:18:20 +1100
+Started GET "/js/parallax.js" for ::1 at 2022-02-15 21:18:20 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/js/jquery-3.1.1.min.js" for ::1 at 2022-02-15 21:18:20 +1100
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-15 21:18:20 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/parallax.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/jquery-3.1.1.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+Started GET "/js/scripts.js" for ::1 at 2022-02-15 21:18:21 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/webhook" for ::1 at 2022-02-15 21:18:23 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/webhook"):
+  
+Started POST "/webhook" for ::1 at 2022-02-15 21:19:39 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTO8DA9176QOxLn0rGXgVJd", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644920378, "data"=>{"object"=>{"id"=>"ch_3KTO8DA9176QOxLn0c4xjm8X", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTO8DA9176QOxLn02fPkk6q", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644920378, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>55, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTO8DA9176QOxLn0SZJwmdp", "payment_method"=>"pm_1KTO8DA9176QOxLnBFwTUhSg", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTO8DA9176QOxLn0c4xjm8X/rcpt_L9hXl7n4RT3zCeZYXFLuILJtkfexNVu", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTO8DA9176QOxLn0c4xjm8X/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_9LWeO2os4lemEV", "idempotency_key"=>"[FILTERED]"}, "type"=>"charge.succeeded", "index"=>{"id"=>"evt_3KTO8DA9176QOxLn0rGXgVJd"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 3.7ms | Allocations: 488)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.2.2) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.2.2) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+actionpack (7.0.2.2) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.2.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.2.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.2.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.2.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.2.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.2.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.2.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.2.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.2.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.2.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.2.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.2.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.2.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:131:in `call'
+railties (7.0.2.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/webhook" for ::1 at 2022-02-15 21:19:39 +1100
+Started POST "/webhook" for ::1 at 2022-02-15 21:19:39 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTO8DA9176QOxLn0Wb44Sz1", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644920378, "data"=>{"object"=>{"id"=>"pi_3KTO8DA9176QOxLn0SZJwmdp", "object"=>"payment_intent", "amount"=>2000, "amount_capturable"=>0, "amount_received"=>2000, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[{"id"=>"ch_3KTO8DA9176QOxLn0c4xjm8X", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTO8DA9176QOxLn02fPkk6q", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644920378, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>55, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTO8DA9176QOxLn0SZJwmdp", "payment_method"=>"pm_1KTO8DA9176QOxLnBFwTUhSg", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTO8DA9176QOxLn0c4xjm8X/rcpt_L9hXl7n4RT3zCeZYXFLuILJtkfexNVu", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTO8DA9176QOxLn0c4xjm8X/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}], "has_more"=>false, "total_count"=>1, "url"=>"/v1/charges?payment_intent=pi_3KTO8DA9176QOxLn0SZJwmdp"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644920377, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>"pm_1KTO8DA9176QOxLnBFwTUhSg", "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_9LWeO2os4lemEV", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.succeeded", "index"=>{"id"=>"evt_3KTO8DA9176QOxLn0Wb44Sz1"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms | Allocations: 431)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.2.2) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.2.2) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+actionpack (7.0.2.2) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.2.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.2.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.2.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.2.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.2.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.2.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.2.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.2.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.2.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.2.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.2.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.2.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.2.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:131:in `call'
+railties (7.0.2.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTO8DA9176QOxLn0mnM8s6t", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644920377, "data"=>{"object"=>{"id"=>"pi_3KTO8DA9176QOxLn0SZJwmdp", "object"=>"payment_intent", "amount"=>2000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTO8DA9176QOxLn0SZJwmdp"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644920377, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_9LWeO2os4lemEV", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTO8DA9176QOxLn0mnM8s6t"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms | Allocations: 456)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (7.0.2.2) lib/action_controller/metal/request_forgery_protection.rb:251:in `handle_unverified_request'
+actionpack (7.0.2.2) lib/action_controller/metal/request_forgery_protection.rb:284:in `handle_unverified_request'
+actionpack (7.0.2.2) lib/action_controller/metal/request_forgery_protection.rb:273:in `verify_authenticity_token'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.2.2) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.2.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.2.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.2.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.2.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.2.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.2.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.2.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.2.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.2.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.2.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.2.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.2) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.2.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:131:in `call'
+railties (7.0.2.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/webhook" for ::1 at 2022-02-15 21:21:40 +1100
+Started POST "/webhook" for ::1 at 2022-02-15 21:21:40 +1100
+Started POST "/webhook" for ::1 at 2022-02-15 21:21:41 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NameError (undefined local variable or method `webhook' for IndicesController:Class):
+  
+app/controllers/indices_controller.rb:5:in `<class:IndicesController>'
+app/controllers/indices_controller.rb:3:in `<main>'
+  
+NameError (undefined local variable or method `webhook' for IndicesController:Class):
+  
+app/controllers/indices_controller.rb:5:in `<class:IndicesController>'
+app/controllers/indices_controller.rb:3:in `<main>'
+  
+NameError (undefined local variable or method `webhook' for IndicesController:Class):
+  
+app/controllers/indices_controller.rb:5:in `<class:IndicesController>'
+app/controllers/indices_controller.rb:3:in `<main>'
+Started POST "/webhook" for ::1 at 2022-02-15 21:22:00 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTOAUA9176QOxLn1mnCFf7h", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644920519, "data"=>{"object"=>{"id"=>"ch_3KTOAUA9176QOxLn1VnONt6n", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTOAUA9176QOxLn1IG6eH9S", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644920518, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>52, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTOAUA9176QOxLn1mCMwvE8", "payment_method"=>"pm_1KTOAUA9176QOxLnTF8EBWSj", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTOAUA9176QOxLn1VnONt6n/rcpt_L9hZQm9B7ONJ5Xx7NTAvKfYKi4jVEjp", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTOAUA9176QOxLn1VnONt6n/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_iA3msGIJ2rG0QW", "idempotency_key"=>"[FILTERED]"}, "type"=>"charge.succeeded", "index"=>{"id"=>"evt_3KTOAUA9176QOxLn1mnCFf7h"}}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 6.1ms | Allocations: 9149)
+
+
+  
+NameError (undefined local variable or method `endpoint_secret' for #<IndicesController:0x0000000000fd20>):
+  
+app/controllers/indices_controller.rb:22:in `webhook'
+Started POST "/webhook" for ::1 at 2022-02-15 21:22:00 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTOAUA9176QOxLn1oB133bb", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644920519, "data"=>{"object"=>{"id"=>"pi_3KTOAUA9176QOxLn1mCMwvE8", "object"=>"payment_intent", "amount"=>2000, "amount_capturable"=>0, "amount_received"=>2000, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[{"id"=>"ch_3KTOAUA9176QOxLn1VnONt6n", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTOAUA9176QOxLn1IG6eH9S", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644920518, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>52, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTOAUA9176QOxLn1mCMwvE8", "payment_method"=>"pm_1KTOAUA9176QOxLnTF8EBWSj", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTOAUA9176QOxLn1VnONt6n/rcpt_L9hZQm9B7ONJ5Xx7NTAvKfYKi4jVEjp", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTOAUA9176QOxLn1VnONt6n/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}], "has_more"=>false, "total_count"=>1, "url"=>"/v1/charges?payment_intent=pi_3KTOAUA9176QOxLn1mCMwvE8"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644920518, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>"pm_1KTOAUA9176QOxLnTF8EBWSj", "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_iA3msGIJ2rG0QW", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.succeeded", "index"=>{"id"=>"evt_3KTOAUA9176QOxLn1oB133bb"}}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 7713)
+
+
+  
+NameError (undefined local variable or method `endpoint_secret' for #<IndicesController:0x000000000100b8>):
+  
+app/controllers/indices_controller.rb:22:in `webhook'
+Started POST "/webhook" for ::1 at 2022-02-15 21:22:00 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTOAUA9176QOxLn1nyaZAGg", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644920518, "data"=>{"object"=>{"id"=>"pi_3KTOAUA9176QOxLn1mCMwvE8", "object"=>"payment_intent", "amount"=>2000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTOAUA9176QOxLn1mCMwvE8"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644920518, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_iA3msGIJ2rG0QW", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTOAUA9176QOxLn1nyaZAGg"}}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 4863)
+
+
+  
+NameError (undefined local variable or method `endpoint_secret' for #<IndicesController:0x000000000103d8>):
+  
+app/controllers/indices_controller.rb:22:in `webhook'
+Started POST "/webhook" for ::1 at 2022-02-15 21:22:25 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTOAsA9176QOxLn0l8MkgLp", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644920544, "data"=>{"object"=>{"id"=>"ch_3KTOAsA9176QOxLn0Za63Goz", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTOAsA9176QOxLn0Osuhbp9", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644920543, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>53, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTOAsA9176QOxLn0WLlhQlN", "payment_method"=>"pm_1KTOArA9176QOxLnTvnKsczF", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTOAsA9176QOxLn0Za63Goz/rcpt_L9ha851upkzNjWQZugkTvz7OLguxRLD", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTOAsA9176QOxLn0Za63Goz/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_E3Xh7Mu4CpWRMA", "idempotency_key"=>"[FILTERED]"}, "type"=>"charge.succeeded", "index"=>{"id"=>"evt_3KTOAsA9176QOxLn0l8MkgLp"}}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 4.7ms | Allocations: 9173)
+
+
+  
+NameError (undefined local variable or method `endpoint_secret' for #<IndicesController:0x0000000000b248>):
+  
+app/controllers/indices_controller.rb:22:in `webhook'
+Started POST "/webhook" for ::1 at 2022-02-15 21:22:26 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTOAsA9176QOxLn055nAiIY", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644920544, "data"=>{"object"=>{"id"=>"pi_3KTOAsA9176QOxLn0WLlhQlN", "object"=>"payment_intent", "amount"=>2000, "amount_capturable"=>0, "amount_received"=>2000, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[{"id"=>"ch_3KTOAsA9176QOxLn0Za63Goz", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTOAsA9176QOxLn0Osuhbp9", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644920543, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>53, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTOAsA9176QOxLn0WLlhQlN", "payment_method"=>"pm_1KTOArA9176QOxLnTvnKsczF", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTOAsA9176QOxLn0Za63Goz/rcpt_L9ha851upkzNjWQZugkTvz7OLguxRLD", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTOAsA9176QOxLn0Za63Goz/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}], "has_more"=>false, "total_count"=>1, "url"=>"/v1/charges?payment_intent=pi_3KTOAsA9176QOxLn0WLlhQlN"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644920542, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>"pm_1KTOArA9176QOxLnTvnKsczF", "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_E3Xh7Mu4CpWRMA", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.succeeded", "index"=>{"id"=>"evt_3KTOAsA9176QOxLn055nAiIY"}}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 7769)
+
+
+  
+NameError (undefined local variable or method `endpoint_secret' for #<IndicesController:0x0000000000b630>):
+  
+app/controllers/indices_controller.rb:22:in `webhook'
+Started POST "/webhook" for ::1 at 2022-02-15 21:22:26 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTOAsA9176QOxLn0jf9EdbA", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644920542, "data"=>{"object"=>{"id"=>"pi_3KTOAsA9176QOxLn0WLlhQlN", "object"=>"payment_intent", "amount"=>2000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTOAsA9176QOxLn0WLlhQlN"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644920542, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_E3Xh7Mu4CpWRMA", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTOAsA9176QOxLn0jf9EdbA"}}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 4868)
+
+
+  
+NameError (undefined local variable or method `endpoint_secret' for #<IndicesController:0x0000000000b978>):
+  
+app/controllers/indices_controller.rb:22:in `webhook'
+Started POST "/webhook" for ::1 at 2022-02-15 21:24:39 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTOD4A9176QOxLn0EVKGPn3", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644920679, "data"=>{"object"=>{"id"=>"ch_3KTOD4A9176QOxLn0eHU1m9s", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTOD4A9176QOxLn0DptVUbn", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644920678, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>34, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTOD4A9176QOxLn0XQDtMub", "payment_method"=>"pm_1KTOD4A9176QOxLnjuD05ANI", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTOD4A9176QOxLn0eHU1m9s/rcpt_L9hcqxcsQqKAbgCCth1Isk2NZaIbbxK", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTOD4A9176QOxLn0eHU1m9s/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_fhi7stKuDLakKG", "idempotency_key"=>"[FILTERED]"}, "type"=>"charge.succeeded", "index"=>{"id"=>"evt_3KTOD4A9176QOxLn0EVKGPn3"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 4.1ms | Allocations: 6381)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/indices_controller.rb:50:in `webhook'
+Started POST "/webhook" for ::1 at 2022-02-15 21:24:39 +1100
+Started POST "/webhook" for ::1 at 2022-02-15 21:24:39 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTOD4A9176QOxLn0z7J0iFk", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644920679, "data"=>{"object"=>{"id"=>"pi_3KTOD4A9176QOxLn0XQDtMub", "object"=>"payment_intent", "amount"=>2000, "amount_capturable"=>0, "amount_received"=>2000, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[{"id"=>"ch_3KTOD4A9176QOxLn0eHU1m9s", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTOD4A9176QOxLn0DptVUbn", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644920678, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>34, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTOD4A9176QOxLn0XQDtMub", "payment_method"=>"pm_1KTOD4A9176QOxLnjuD05ANI", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTOD4A9176QOxLn0eHU1m9s/rcpt_L9hcqxcsQqKAbgCCth1Isk2NZaIbbxK", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTOD4A9176QOxLn0eHU1m9s/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}], "has_more"=>false, "total_count"=>1, "url"=>"/v1/charges?payment_intent=pi_3KTOD4A9176QOxLn0XQDtMub"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644920678, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>"pm_1KTOD4A9176QOxLnjuD05ANI", "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_fhi7stKuDLakKG", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.succeeded", "index"=>{"id"=>"evt_3KTOD4A9176QOxLn0z7J0iFk"}}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 9761)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/indices_controller.rb:50:in `webhook'
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTOD4A9176QOxLn0Pg1PeZb", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644920678, "data"=>{"object"=>{"id"=>"pi_3KTOD4A9176QOxLn0XQDtMub", "object"=>"payment_intent", "amount"=>2000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTOD4A9176QOxLn0XQDtMub"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644920678, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_fhi7stKuDLakKG", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTOD4A9176QOxLn0Pg1PeZb"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 5211)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/indices_controller.rb:50:in `webhook'
+Started POST "/webhook" for ::1 at 2022-02-15 21:25:08 +1100
+Started POST "/webhook" for ::1 at 2022-02-15 21:25:08 +1100
+Started POST "/webhook" for ::1 at 2022-02-15 21:25:08 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#webhook as XML
+Processing by IndicesController#webhook as XML
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTODWA9176QOxLn1BUbFy5R", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644920707, "data"=>{"object"=>{"id"=>"pi_3KTODWA9176QOxLn1wSpWpN7", "object"=>"payment_intent", "amount"=>2000, "amount_capturable"=>0, "amount_received"=>2000, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[{"id"=>"ch_3KTODWA9176QOxLn1XtYhMFn", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTODWA9176QOxLn1FxEYVpX", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644920706, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>11, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTODWA9176QOxLn1wSpWpN7", "payment_method"=>"pm_1KTODVA9176QOxLn6zCFg5e5", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTODWA9176QOxLn1XtYhMFn/rcpt_L9hcZLEEvX147zUCru9KJxouy9z8OQL", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTODWA9176QOxLn1XtYhMFn/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}], "has_more"=>false, "total_count"=>1, "url"=>"/v1/charges?payment_intent=pi_3KTODWA9176QOxLn1wSpWpN7"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644920706, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>"pm_1KTODVA9176QOxLn6zCFg5e5", "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_Ca1hQQgsRSDdcI", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.succeeded", "index"=>{"id"=>"evt_3KTODWA9176QOxLn1BUbFy5R"}}
+  Parameters: {"id"=>"evt_3KTODWA9176QOxLn1wQ0htys", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644920707, "data"=>{"object"=>{"id"=>"ch_3KTODWA9176QOxLn1XtYhMFn", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTODWA9176QOxLn1FxEYVpX", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644920706, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>11, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTODWA9176QOxLn1wSpWpN7", "payment_method"=>"pm_1KTODVA9176QOxLn6zCFg5e5", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTODWA9176QOxLn1XtYhMFn/rcpt_L9hcZLEEvX147zUCru9KJxouy9z8OQL", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTODWA9176QOxLn1XtYhMFn/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_Ca1hQQgsRSDdcI", "idempotency_key"=>"[FILTERED]"}, "type"=>"charge.succeeded", "index"=>{"id"=>"evt_3KTODWA9176QOxLn1wQ0htys"}}
+  Parameters: {"id"=>"evt_3KTODWA9176QOxLn17sVuWD6", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644920706, "data"=>{"object"=>{"id"=>"pi_3KTODWA9176QOxLn1wSpWpN7", "object"=>"payment_intent", "amount"=>2000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTODWA9176QOxLn1wSpWpN7"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644920706, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_Ca1hQQgsRSDdcI", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTODWA9176QOxLn17sVuWD6"}}
+No template found for IndicesController#webhook, rendering head :no_content
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 12ms (ActiveRecord: 0.0ms | Allocations: 23569)
+
+
+Completed 204 No Content in 11ms (ActiveRecord: 0.0ms | Allocations: 23217)
+
+
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 12ms (ActiveRecord: 3.8ms | Allocations: 23649)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 08:05:40 +1100
+Started POST "/webhook" for ::1 at 2022-02-16 08:05:40 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTYDPA9176QOxLn0UNENXQX", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644959140, "data"=>{"object"=>{"id"=>"ch_3KTYDPA9176QOxLn0ZPkZB2j", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTYDPA9176QOxLn0shH5Umj", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644959139, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>37, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTYDPA9176QOxLn0YYrFlzp", "payment_method"=>"pm_1KTYDPA9176QOxLnS5AWxzp6", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTYDPA9176QOxLn0ZPkZB2j/rcpt_L9rxIbusfmsO7abnfE9t1ezi1Stjn6h", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTYDPA9176QOxLn0ZPkZB2j/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_DGttCSOnAWeiuR", "idempotency_key"=>"[FILTERED]"}, "type"=>"charge.succeeded", "index"=>{"id"=>"evt_3KTYDPA9176QOxLn0UNENXQX"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 14.9ms | Allocations: 6365)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/indices_controller.rb:50:in `webhook'
+Started POST "/webhook" for ::1 at 2022-02-16 08:05:41 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTYDPA9176QOxLn0OaSHh6a", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644959139, "data"=>{"object"=>{"id"=>"pi_3KTYDPA9176QOxLn0YYrFlzp", "object"=>"payment_intent", "amount"=>2000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTYDPA9176QOxLn0YYrFlzp"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644959139, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_DGttCSOnAWeiuR", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTYDPA9176QOxLn0OaSHh6a", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644959139, "data"=>{"object"=>{"id"=>"pi_3KTYDPA9176QOxLn0YYrFlzp", "object"=>"payment_intent", "amount"=>2000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTYDPA9176QOxLn0YYrFlzp"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644959139, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_DGttCSOnAWeiuR", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 4367)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/indices_controller.rb:50:in `webhook'
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTYDPA9176QOxLn0ADoyT0h", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644959140, "data"=>{"object"=>{"id"=>"pi_3KTYDPA9176QOxLn0YYrFlzp", "object"=>"payment_intent", "amount"=>2000, "amount_capturable"=>0, "amount_received"=>2000, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[{"id"=>"ch_3KTYDPA9176QOxLn0ZPkZB2j", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTYDPA9176QOxLn0shH5Umj", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644959139, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>37, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTYDPA9176QOxLn0YYrFlzp", "payment_method"=>"pm_1KTYDPA9176QOxLnS5AWxzp6", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTYDPA9176QOxLn0ZPkZB2j/rcpt_L9rxIbusfmsO7abnfE9t1ezi1Stjn6h", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTYDPA9176QOxLn0ZPkZB2j/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}], "has_more"=>false, "total_count"=>1, "url"=>"/v1/charges?payment_intent=pi_3KTYDPA9176QOxLn0YYrFlzp"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644959139, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>"pm_1KTYDPA9176QOxLnS5AWxzp6", "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_DGttCSOnAWeiuR", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.succeeded", "index"=>{"id"=>"evt_3KTYDPA9176QOxLn0ADoyT0h"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 48.1ms | Allocations: 10473)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/indices_controller.rb:50:in `webhook'
+Started POST "/webhook" for ::1 at 2022-02-16 08:06:16 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTYDyA9176QOxLn0DoQA3yD", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644959175, "data"=>{"object"=>{"id"=>"ch_3KTYDyA9176QOxLn0J4nuxIt", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTYDyA9176QOxLn0OWRFVhI", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644959174, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>56, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTYDyA9176QOxLn0Mk5Ontw", "payment_method"=>"pm_1KTYDyA9176QOxLneLOMonyn", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTYDyA9176QOxLn0J4nuxIt/rcpt_L9rxueW6PlG7CAeykpheCNmFDlXPJVW", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTYDyA9176QOxLn0J4nuxIt/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_wwdvpvjWcU2GI4", "idempotency_key"=>"[FILTERED]"}, "type"=>"charge.succeeded", "index"=>{"id"=>"evt_3KTYDyA9176QOxLn0DoQA3yD"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 4ms (ActiveRecord: 5.4ms | Allocations: 6377)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 08:06:16 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTYDyA9176QOxLn0wPfpHGS", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644959175, "data"=>{"object"=>{"id"=>"pi_3KTYDyA9176QOxLn0Mk5Ontw", "object"=>"payment_intent", "amount"=>2000, "amount_capturable"=>0, "amount_received"=>2000, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[{"id"=>"ch_3KTYDyA9176QOxLn0J4nuxIt", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTYDyA9176QOxLn0OWRFVhI", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644959174, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>56, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTYDyA9176QOxLn0Mk5Ontw", "payment_method"=>"pm_1KTYDyA9176QOxLneLOMonyn", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTYDyA9176QOxLn0J4nuxIt/rcpt_L9rxueW6PlG7CAeykpheCNmFDlXPJVW", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTYDyA9176QOxLn0J4nuxIt/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}], "has_more"=>false, "total_count"=>1, "url"=>"/v1/charges?payment_intent=pi_3KTYDyA9176QOxLn0Mk5Ontw"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644959174, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>"pm_1KTYDyA9176QOxLneLOMonyn", "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_wwdvpvjWcU2GI4", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.succeeded", "index"=>{"id"=>"evt_3KTYDyA9176QOxLn0wPfpHGS"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 9459)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 08:06:16 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTYDyA9176QOxLn0owiuCdT", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644959174, "data"=>{"object"=>{"id"=>"pi_3KTYDyA9176QOxLn0Mk5Ontw", "object"=>"payment_intent", "amount"=>2000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTYDyA9176QOxLn0Mk5Ontw"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644959174, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_wwdvpvjWcU2GI4", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTYDyA9176QOxLn0owiuCdT"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 3908)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 08:07:03 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTYEhA9176QOxLn1LwVuOo2", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644959220, "data"=>{"object"=>{"id"=>"ch_3KTYEhA9176QOxLn18OL1X9C", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTYEhA9176QOxLn1FGPUIHZ", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644959220, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>38, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTYEhA9176QOxLn18ISUlP4", "payment_method"=>"pm_1KTYEhA9176QOxLnsFeJsyWo", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTYEhA9176QOxLn18OL1X9C/rcpt_L9rypLerK90XFjch3KYiNsjZygM4uZz", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTYEhA9176QOxLn18OL1X9C/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_0pIb2PCBe9Ex1i", "idempotency_key"=>"[FILTERED]"}, "type"=>"charge.succeeded", "index"=>{"id"=>"evt_3KTYEhA9176QOxLn1LwVuOo2"}}
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 3.3ms | Allocations: 8970)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<IndicesController:0x0000000001bd28>):
+  
+app/controllers/indices_controller.rb:52:in `webhook'
+Started POST "/webhook" for ::1 at 2022-02-16 08:07:03 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTYEhA9176QOxLn15BUImpY", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644959221, "data"=>{"object"=>{"id"=>"pi_3KTYEhA9176QOxLn18ISUlP4", "object"=>"payment_intent", "amount"=>2000, "amount_capturable"=>0, "amount_received"=>2000, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[{"id"=>"ch_3KTYEhA9176QOxLn18OL1X9C", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTYEhA9176QOxLn1FGPUIHZ", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644959220, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>38, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTYEhA9176QOxLn18ISUlP4", "payment_method"=>"pm_1KTYEhA9176QOxLnsFeJsyWo", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTYEhA9176QOxLn18OL1X9C/rcpt_L9rypLerK90XFjch3KYiNsjZygM4uZz", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTYEhA9176QOxLn18OL1X9C/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}], "has_more"=>false, "total_count"=>1, "url"=>"/v1/charges?payment_intent=pi_3KTYEhA9176QOxLn18ISUlP4"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644959219, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>"pm_1KTYEhA9176QOxLnsFeJsyWo", "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_0pIb2PCBe9Ex1i", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.succeeded", "index"=>{"id"=>"evt_3KTYEhA9176QOxLn15BUImpY"}}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 12306)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<IndicesController:0x0000000001c228>):
+  
+app/controllers/indices_controller.rb:52:in `webhook'
+Started POST "/webhook" for ::1 at 2022-02-16 08:07:03 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTYEhA9176QOxLn1OJEyR8l", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644959219, "data"=>{"object"=>{"id"=>"pi_3KTYEhA9176QOxLn18ISUlP4", "object"=>"payment_intent", "amount"=>2000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTYEhA9176QOxLn18ISUlP4"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644959219, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_0pIb2PCBe9Ex1i", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTYEhA9176QOxLn1OJEyR8l"}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 7078)
+
+
+  
+NameError (undefined local variable or method `byebug' for #<IndicesController:0x0000000001c2a0>):
+  
+app/controllers/indices_controller.rb:52:in `webhook'
+Started POST "/webhook" for ::1 at 2022-02-16 08:07:43 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTYFOA9176QOxLn1s48uXGo", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644959263, "data"=>{"object"=>{"id"=>"ch_3KTYFOA9176QOxLn1XiPLgYr", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTYFOA9176QOxLn1ADK95tc", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644959262, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>47, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTYFOA9176QOxLn1yO835Yp", "payment_method"=>"pm_1KTYFOA9176QOxLnjzJjpFSC", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTYFOA9176QOxLn1XiPLgYr/rcpt_L9rzuHPpwy6q3wSSFYX3AFWiJH8HYfQ", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTYFOA9176QOxLn1XiPLgYr/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_wL1CsRQZvt77av", "idempotency_key"=>"[FILTERED]"}, "type"=>"charge.succeeded", "index"=>{"id"=>"evt_3KTYFOA9176QOxLn1s48uXGo"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 6.2ms | Allocations: 8954)
+
+
+  
+NameError (undefined local variable or method `debug' for #<IndicesController:0x00000000020800>
+Did you mean?  debugger):
+  
+app/controllers/indices_controller.rb:52:in `webhook'
+Started POST "/webhook" for ::1 at 2022-02-16 08:07:44 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTYFOA9176QOxLn1qDEZVW4", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644959263, "data"=>{"object"=>{"id"=>"pi_3KTYFOA9176QOxLn1yO835Yp", "object"=>"payment_intent", "amount"=>2000, "amount_capturable"=>0, "amount_received"=>2000, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[{"id"=>"ch_3KTYFOA9176QOxLn1XiPLgYr", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTYFOA9176QOxLn1ADK95tc", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644959262, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>47, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTYFOA9176QOxLn1yO835Yp", "payment_method"=>"pm_1KTYFOA9176QOxLnjzJjpFSC", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTYFOA9176QOxLn1XiPLgYr/rcpt_L9rzuHPpwy6q3wSSFYX3AFWiJH8HYfQ", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTYFOA9176QOxLn1XiPLgYr/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}], "has_more"=>false, "total_count"=>1, "url"=>"/v1/charges?payment_intent=pi_3KTYFOA9176QOxLn1yO835Yp"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644959262, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>"pm_1KTYFOA9176QOxLnjzJjpFSC", "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_wL1CsRQZvt77av", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.succeeded", "index"=>{"id"=>"evt_3KTYFOA9176QOxLn1qDEZVW4"}}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 12335)
+
+
+  
+NameError (undefined local variable or method `debug' for #<IndicesController:0x00000000020b20>
+Did you mean?  debugger):
+  
+app/controllers/indices_controller.rb:52:in `webhook'
+Started POST "/webhook" for ::1 at 2022-02-16 08:07:44 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTYFOA9176QOxLn1qPLJr9K", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644959262, "data"=>{"object"=>{"id"=>"pi_3KTYFOA9176QOxLn1yO835Yp", "object"=>"payment_intent", "amount"=>2000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTYFOA9176QOxLn1yO835Yp"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644959262, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_wL1CsRQZvt77av", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTYFOA9176QOxLn1qPLJr9K"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 7022)
+
+
+  
+NameError (undefined local variable or method `debug' for #<IndicesController:0x00000000020b98>
+Did you mean?  debugger):
+  
+app/controllers/indices_controller.rb:52:in `webhook'
+Started POST "/webhook" for ::1 at 2022-02-16 08:07:57 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTYFcA9176QOxLn0G5r57fb", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644959277, "data"=>{"object"=>{"id"=>"ch_3KTYFcA9176QOxLn0eH5Dul0", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTYFcA9176QOxLn0S1sX5iL", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644959276, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>18, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTYFcA9176QOxLn0mpUoU3c", "payment_method"=>"pm_1KTYFcA9176QOxLnav1mJm8M", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTYFcA9176QOxLn0eH5Dul0/rcpt_L9rzf2jLEglUOHhLqpuVhJ6qbbEsu6q", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTYFcA9176QOxLn0eH5Dul0/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_DLgDXJK1f9Atrm", "idempotency_key"=>"[FILTERED]"}, "type"=>"charge.succeeded", "index"=>{"id"=>"evt_3KTYFcA9176QOxLn0G5r57fb"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 4028451ms (ActiveRecord: 3.8ms | Allocations: 177040)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 09:15:06 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTYFcA9176QOxLn0igzApQl", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644959277, "data"=>{"object"=>{"id"=>"pi_3KTYFcA9176QOxLn0mpUoU3c", "object"=>"payment_intent", "amount"=>2000, "amount_capturable"=>0, "amount_received"=>2000, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[{"id"=>"ch_3KTYFcA9176QOxLn0eH5Dul0", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTYFcA9176QOxLn0S1sX5iL", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644959276, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>18, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTYFcA9176QOxLn0mpUoU3c", "payment_method"=>"pm_1KTYFcA9176QOxLnav1mJm8M", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTYFcA9176QOxLn0eH5Dul0/rcpt_L9rzf2jLEglUOHhLqpuVhJ6qbbEsu6q", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTYFcA9176QOxLn0eH5Dul0/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}], "has_more"=>false, "total_count"=>1, "url"=>"/v1/charges?payment_intent=pi_3KTYFcA9176QOxLn0mpUoU3c"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644959276, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>"pm_1KTYFcA9176QOxLnav1mJm8M", "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_DLgDXJK1f9Atrm", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.succeeded", "index"=>{"id"=>"evt_3KTYFcA9176QOxLn0igzApQl"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 8050)
+
+
+  
+NameError (undefined local variable or method `err' for #<IndicesController:0x00000000025238>):
+  
+app/controllers/indices_controller.rb:31:in `rescue in webhook'
+app/controllers/indices_controller.rb:26:in `webhook'
+Started GET "/" for ::1 at 2022-02-16 09:15:15 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 33.8ms | Allocations: 38898)
+  Rendered layout layouts/application.html.erb (Duration: 45.2ms | Allocations: 64414)
+Completed 200 OK in 51ms (Views: 46.9ms | ActiveRecord: 0.0ms | Allocations: 71094)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 09:15:15 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/js/jquery-3.1.1.min.js" for ::1 at 2022-02-16 09:15:15 +1100
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-16 09:15:15 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/jquery-3.1.1.min.js"):
+  
+Started GET "/js/scripts.js" for ::1 at 2022-02-16 09:15:15 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/js/parallax.js" for ::1 at 2022-02-16 09:15:15 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/parallax.js"):
+  
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 09:15:15 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-16 09:15:15 +1100
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 09:15:15 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started GET "/js/scripts.js" for ::1 at 2022-02-16 09:15:15 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for ::1 at 2022-02-16 09:15:58 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2317)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 12422)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms | Allocations: 12810)
+
+
+Started GET "/js/jquery-3.1.1.min.js" for ::1 at 2022-02-16 09:15:59 +1100
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 09:15:59 +1100
+Started GET "/js/scripts.js" for ::1 at 2022-02-16 09:15:59 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/jquery-3.1.1.min.js"):
+  
+Started GET "/js/parallax.js" for ::1 at 2022-02-16 09:15:59 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-16 09:15:59 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/parallax.js"):
+  
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 09:15:59 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/js/scripts.js" for ::1 at 2022-02-16 09:15:59 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 09:15:59 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started GET "/" for ::1 at 2022-02-16 09:16:59 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 2873)
+  Rendered layout layouts/application.html.erb (Duration: 176.2ms | Allocations: 33511)
+Completed 200 OK in 181ms (Views: 179.2ms | ActiveRecord: 0.0ms | Allocations: 34703)
+
+
+Started GET "/js/jquery-3.1.1.min.js" for ::1 at 2022-02-16 09:16:59 +1100
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-16 09:16:59 +1100
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 09:16:59 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/jquery-3.1.1.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+Started GET "/js/scripts.js" for ::1 at 2022-02-16 09:16:59 +1100
+Started GET "/js/parallax.js" for ::1 at 2022-02-16 09:16:59 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/parallax.js"):
+  
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-16 09:16:59 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+Started GET "/js/scripts.js" for ::1 at 2022-02-16 09:16:59 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 09:17:00 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 09:17:00 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started GET "/" for ::1 at 2022-02-16 09:20:29 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2230)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 12280)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 12641)
+
+
+Started GET "/js/jquery-3.1.1.min.js" for ::1 at 2022-02-16 09:20:30 +1100
+Started GET "/js/parallax.js" for ::1 at 2022-02-16 09:20:30 +1100
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-16 09:20:30 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/jquery-3.1.1.min.js"):
+  
+Started GET "/js/scripts.js" for ::1 at 2022-02-16 09:20:30 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/parallax.js"):
+  
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 09:20:30 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 09:20:30 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 09:20:30 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started GET "/" for ::1 at 2022-02-16 09:30:52 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2233)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 12266)
+Completed 200 OK in 25ms (Views: 23.7ms | Allocations: 12609)
+
+
+Started GET "/js/jquery-3.1.1.min.js" for ::1 at 2022-02-16 09:30:52 +1100
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-16 09:30:52 +1100
+Started GET "/js/parallax.js" for ::1 at 2022-02-16 09:30:52 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/jquery-3.1.1.min.js"):
+  
+Started GET "/js/scripts.js" for ::1 at 2022-02-16 09:30:52 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 09:30:52 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/parallax.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/js/parallax.js" for ::1 at 2022-02-16 09:30:52 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/parallax.js"):
+  
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-16 09:30:52 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+Started GET "/js/scripts.js" for ::1 at 2022-02-16 09:30:52 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 09:30:57 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 09:30:57 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started GET "/" for ::1 at 2022-02-16 09:31:52 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2233)
+  Rendered layout layouts/application.html.erb (Duration: 144.3ms | Allocations: 27167)
+Completed 200 OK in 146ms (Views: 144.9ms | Allocations: 27503)
+
+
+Started GET "/js/jquery-3.1.1.min.js" for ::1 at 2022-02-16 09:31:52 +1100
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-16 09:31:52 +1100
+Started GET "/js/parallax.js" for ::1 at 2022-02-16 09:31:52 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/jquery-3.1.1.min.js"):
+  
+Started GET "/js/scripts.js" for ::1 at 2022-02-16 09:31:52 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 09:31:52 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/parallax.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-16 09:31:52 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+Started GET "/js/scripts.js" for ::1 at 2022-02-16 09:31:53 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for ::1 at 2022-02-16 09:32:00 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2230)
+  Rendered layout layouts/application.html.erb (Duration: 145.2ms | Allocations: 26325)
+Completed 200 OK in 147ms (Views: 145.9ms | Allocations: 26661)
+
+
+Started GET "/js/jquery-3.1.1.min.js" for ::1 at 2022-02-16 09:32:00 +1100
+Started GET "/js/parallax.js" for ::1 at 2022-02-16 09:32:00 +1100
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-16 09:32:00 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/jquery-3.1.1.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/parallax.js"):
+  
+Started GET "/js/scripts.js" for ::1 at 2022-02-16 09:32:00 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 09:32:00 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/js/parallax.js" for ::1 at 2022-02-16 09:32:00 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/parallax.js"):
+  
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-16 09:32:01 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+Started GET "/js/scripts.js" for ::1 at 2022-02-16 09:32:01 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for ::1 at 2022-02-16 09:32:05 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2230)
+  Rendered layout layouts/application.html.erb (Duration: 146.3ms | Allocations: 26289)
+Completed 200 OK in 149ms (Views: 148.3ms | Allocations: 26625)
+
+
+Started GET "/js/jquery-3.1.1.min.js" for ::1 at 2022-02-16 09:32:05 +1100
+Started GET "/js/scripts.js" for ::1 at 2022-02-16 09:32:05 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/jquery-3.1.1.min.js"):
+  
+Started GET "/js/parallax.js" for ::1 at 2022-02-16 09:32:05 +1100
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 09:32:05 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-16 09:32:05 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/parallax.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-16 09:32:06 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+Started GET "/js/scripts.js" for ::1 at 2022-02-16 09:32:06 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for ::1 at 2022-02-16 09:32:09 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2233)
+  Rendered layout layouts/application.html.erb (Duration: 178.7ms | Allocations: 26760)
+Completed 200 OK in 180ms (Views: 179.3ms | Allocations: 27097)
+
+
+Started GET "/js/jquery-3.1.1.min.js" for ::1 at 2022-02-16 09:32:09 +1100
+Started GET "/js/parallax.js" for ::1 at 2022-02-16 09:32:09 +1100
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 09:32:09 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/jquery-3.1.1.min.js"):
+  
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-16 09:32:09 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/parallax.js"):
+  
+Started GET "/js/scripts.js" for ::1 at 2022-02-16 09:32:09 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/js/scripts.js" for ::1 at 2022-02-16 09:32:10 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/" for ::1 at 2022-02-16 09:32:26 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 2877)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 13424)
+Completed 200 OK in 27ms (Views: 25.8ms | Allocations: 14602)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 09:32:26 +1100
+Started GET "/js/jquery-3.1.1.min.js" for ::1 at 2022-02-16 09:32:26 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/jquery-3.1.1.min.js"):
+  
+Started GET "/js/parallax.js" for ::1 at 2022-02-16 09:32:26 +1100
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-16 09:32:26 +1100
+Started GET "/js/scripts.js" for ::1 at 2022-02-16 09:32:26 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/parallax.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/js/jquery-3.1.1.min.js" for ::1 at 2022-02-16 09:32:26 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/jquery-3.1.1.min.js"):
+  
+Started GET "/js/parallax.js" for ::1 at 2022-02-16 09:32:26 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/parallax.js"):
+  
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-16 09:32:26 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+Started GET "/js/scripts.js" for ::1 at 2022-02-16 09:32:27 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 09:32:38 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 09:32:38 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  

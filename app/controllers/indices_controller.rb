@@ -1,13 +1,69 @@
+require 'json'
+require 'stripe'
 class IndicesController < ApplicationController
   before_action :set_index, only: %i[ show edit update destroy ]
+  skip_before_action :verify_authenticity_token, only: [ :webhook ]
 
+  def webhook
+    endpoint_secret = 'whsec_3dcacc6015399a286feeac1a990329553c40b1633214608063f19cb07e0e2cb6';
+    payload = request.body.read
+    event = nil
+
+    begin
+      event = Stripe::Event.construct_from(
+        JSON.parse(payload, symbolize_names: true)
+      )
+    rescue JSON::ParserError => e
+      # Invalid payload
+      puts "⚠️  Webhook error while parsing basic request. #{e.message})"
+      status 400
+      return
+    end
+    # Check if webhook signing is configured.
+    if endpoint_secret
+      # Retrieve the event by verifying the signature using the raw body and secret.
+      signature = request.env['HTTP_STRIPE_SIGNATURE'];
+      begin
+        event = Stripe::Webhook.construct_event(
+          payload, signature, endpoint_secret
+        )
+      rescue Stripe::SignatureVerificationError
+        puts "⚠️  Webhook signature verification failed. #{err.message})"
+        status 400
+      end
+    end
+
+    # Handle the event
+    case event.type
+    when 'payment_intent.succeeded'
+      payment_intent = event.data.object # contains a Stripe::PaymentIntent
+      puts "Payment for #{payment_intent['amount']} succeeded."
+      # Then define and call a method to handle the successful payment intent.
+      # handle_payment_intent_succeeded(payment_intent)
+    when 'payment_method.attached'
+      payment_method = event.data.object # contains a Stripe::PaymentMethod
+      # Then define and call a method to handle the successful attachment of a PaymentMethod.
+      # handle_payment_method_attached(payment_method)
+    else
+      puts "Unhandled event type: #{event.type}"
+    end
+    status
+
+    debugger
+  end
   # GET /indices or /indices.json
+
   def index
     @indices = Index.all
   end
 
   # GET /indices/1 or /indices/1.json
   def show
+    # Set your secret key. Remember to switch to your live secret key in production.
+    # See your keys here: https://dashboard.stripe.com/apikeys
+  Stripe.api_key = 'sk_test_51KSfv1A9176QOxLnwHZ9thq94OpjF3snKEHf8PQgNvkadyrfPP83fKsPyIRZw2AB0CI1YqbvRF9fMSthNl5PuC5R00ztJez2WW'
+
+  Stripe::Customer.create(description: 'My First Test Customer')
   end
 
   # GET /indices/new
