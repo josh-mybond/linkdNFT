@@ -2,7 +2,7 @@ require 'json'
 require 'stripe'
 class IndicesController < ApplicationController
   before_action :set_index, only: %i[ show edit update destroy ]
-  skip_before_action :verify_authenticity_token, only: [ :webhook ]
+  skip_before_action :verify_authenticity_token, only: [ :webhook, :create_customer ]
 
   def webhook
     endpoint_secret = 'whsec_3dcacc6015399a286feeac1a990329553c40b1633214608063f19cb07e0e2cb6';
@@ -47,14 +47,36 @@ class IndicesController < ApplicationController
     else
       puts "Unhandled event type: #{event.type}"
     end
-    status
 
-    debugger
+    # Handle the event
+    case event.type
+    when 'charge.captured'
+        charge = event.data.object
+    when 'charge.succeeded'
+        charge = event.data.object
+        Customer.find_by(email: event.data.object["billing_details"]["email"])
+    when 'charge.dispute.funds_reinstated'
+        dispute = event.data.object
+    when 'checkout.session.async_payment_failed'
+        session = event.data.object
+    when 'checkout.session.async_payment_succeeded'
+        session = event.data.object
+    # ... handle other event types
+    else
+        puts "Unhandled event type: #{event.type}"
+    end
+    status
   end
   # GET /indices or /indices.json
 
   def index
     @indices = Index.all
+  end
+
+  def create_customer
+    @customer = Customer.new(first_name: params[:First_Name], email: params[:Email_Address], linked_in_profile: params[:linked_in_profile], image: params[:images])
+    @customer.save
+    redirect_to "https://buy.stripe.com/test_cN29E66KDbWM3ugdQQ", allow_other_host: true
   end
 
   # GET /indices/1 or /indices/1.json
@@ -63,7 +85,7 @@ class IndicesController < ApplicationController
     # See your keys here: https://dashboard.stripe.com/apikeys
   Stripe.api_key = 'sk_test_51KSfv1A9176QOxLnwHZ9thq94OpjF3snKEHf8PQgNvkadyrfPP83fKsPyIRZw2AB0CI1YqbvRF9fMSthNl5PuC5R00ztJez2WW'
 
-  Stripe::Customer.create(description: 'My First Test Customer')
+  Stripe::Customer.create(description: 'My First Test Customer', first_name: "josh", last_name: "bond")
   end
 
   # GET /indices/new

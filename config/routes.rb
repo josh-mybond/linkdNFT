@@ -4,5 +4,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "indices#index"
-  post 'webhook', to: "indices#webhook" 
+  post 'webhook', to: "indices#webhook"
+  post 'customer_create', to: "indices#create_customer" 
 end

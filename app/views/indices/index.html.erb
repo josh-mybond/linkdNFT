@@ -15,14 +15,7 @@
                                   <a class="modal-trigger menu-toggle" href="#"> </a>
                                   <div class="modal-container menu-fullscreen">
                                       <div class="modal-content" data-width="100%" data-height="100%">
-                                          <div class="pos-vertical-center pos-asbolute text-center">
-                                              <div class="heading-block"> <img alt="Image" src="img/logo-light.png" class="logo image--xs">
-                                                  <p class="lead"> A robust, multipurpose HTML template with<br class="hidden-xs hidden-sm"> over 250 interface blocks. </p>
-                                              </div>
-                                              <ul class="menu-vertical">
-                                                  <li class="h4"> <a href="#">Single</a> </li>
-                                              </ul>
-                                          </div>
+
                                           <div class="pos-absolute pos-bottom text-center">
                                               <ul class="social-list list-inline list--hover">
                                                   <li><a href="#"><i class="socicon socicon-google icon icon--xs"></i></a></li>
@@ -50,19 +43,16 @@
                         <div class="switchable__text">
                             <h2>Create your LinkdNFT Today!</h2> <span><br></span>
                             <hr class="short">
-                            <form>
                                 <div class="row">
-                                    <div class="col-12"> <input type="text" name="First Name" placeholder="Your Name"> </div>
-                                    <div class="col-12"> <input type="email" name="Email Address" placeholder="Link to your LinkedIn Profile"> </div>
-                                    <div class="col-12"> <input type="password" name="Password" placeholder="Email Address"> </div>
-                                    <div class="col-12"> <input type="password" name="Password-confirm" placeholder="Profile Picture"> </div>
-                                    <div class="col-12">
-                                      <span>  </span> </div>
-                                    <div class="col-12"> <a href="https://buy.stripe.com/test_cN29E66KDbWM3ugdQQ" class="btn btn--primary" style="color:white; width:100%;">Purchase</a> </div>
-                                    <hr>
+                                  <form id="form" action="/customer_create" method="POST">
+                                    <div class="col-12"> <input type="text" name="First_Name" placeholder="Your Name"> </div>
+                                    <div class="col-12"> <input type="text" name="linked_in_profile" placeholder="Link to your LinkedIn Profile"> </div>
+                                    <div class="col-12"> <input type="email" name="Email_Address" placeholder="Email Address"> </div>
+                                    <div class="col-12"> <input type="file" name="images" placeholder="Profile Picture"> </div>
+                                    <div class="col-12"> <submit onClick="document.getElementById('form').submit()" style='width:100%; color:white' class="btn btn--primary">Purchase</submit> </div>
                                     <div class="col-12"> <span class="type--fine-print">By purchasing, you agree to the <a href="#">Terms of Service</a></span> </div>
+                                  </form>
                                 </div>
-                            </form>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-5 small"> <%= image_tag "landing-5.jpg", class:"border--round box-shadow-shallow" %> </div>
@@ -144,7 +134,17 @@
             </div>
         </footer>
     </div>
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/parallax.js"></script>
-    <script src="js/smooth-scroll.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous">
+    </script>
+    <%= javascript_include_tag "scripts.js" %>
+<script>
+
+  $('#form').submit(function (e) {
+    e.preventDefault();
+    print('here');
+  });
+
+</script>

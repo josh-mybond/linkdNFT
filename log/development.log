@@ -2247,3 +2247,1530 @@ Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 09:32:38 +1100
   
 ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
   
+Started POST "/webhook" for ::1 at 2022-02-16 10:07:59 +1100
+Started POST "/webhook" for ::1 at 2022-02-16 10:07:59 +1100
+Started POST "/webhook" for ::1 at 2022-02-16 10:07:59 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#webhook as XML
+Processing by IndicesController#webhook as XML
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTa7lA9176QOxLn1t6mY8eu", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644966478, "data"=>{"object"=>{"id"=>"ch_3KTa7lA9176QOxLn1GuZ79br", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTa7lA9176QOxLn1bD4yVFX", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644966477, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>1, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTa7lA9176QOxLn1QZ5RZWP", "payment_method"=>"pm_1KTa7lA9176QOxLnLCwBmYQu", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTa7lA9176QOxLn1GuZ79br/rcpt_L9tvTky8nazmOH3hN1zf2iFZdzMqJOd", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTa7lA9176QOxLn1GuZ79br/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_H64PqOyJ0WViol", "idempotency_key"=>"[FILTERED]"}, "type"=>"charge.succeeded", "index"=>{"id"=>"evt_3KTa7lA9176QOxLn1t6mY8eu"}}
+  Parameters: {"id"=>"evt_3KTa7lA9176QOxLn1m6VZOVr", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644966477, "data"=>{"object"=>{"id"=>"pi_3KTa7lA9176QOxLn1QZ5RZWP", "object"=>"payment_intent", "amount"=>2000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTa7lA9176QOxLn1QZ5RZWP"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644966477, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_H64PqOyJ0WViol", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTa7lA9176QOxLn1m6VZOVr"}}
+  Parameters: {"id"=>"evt_3KTa7lA9176QOxLn1Vse8pyv", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644966478, "data"=>{"object"=>{"id"=>"pi_3KTa7lA9176QOxLn1QZ5RZWP", "object"=>"payment_intent", "amount"=>2000, "amount_capturable"=>0, "amount_received"=>2000, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[{"id"=>"ch_3KTa7lA9176QOxLn1GuZ79br", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTa7lA9176QOxLn1bD4yVFX", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644966477, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>1, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTa7lA9176QOxLn1QZ5RZWP", "payment_method"=>"pm_1KTa7lA9176QOxLnLCwBmYQu", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTa7lA9176QOxLn1GuZ79br/rcpt_L9tvTky8nazmOH3hN1zf2iFZdzMqJOd", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTa7lA9176QOxLn1GuZ79br/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}], "has_more"=>false, "total_count"=>1, "url"=>"/v1/charges?payment_intent=pi_3KTa7lA9176QOxLn1QZ5RZWP"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644966477, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>"pm_1KTa7lA9176QOxLnLCwBmYQu", "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_H64PqOyJ0WViol", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.succeeded", "index"=>{"id"=>"evt_3KTa7lA9176QOxLn1Vse8pyv"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 10ms (ActiveRecord: 0.0ms | Allocations: 23167)
+
+
+No template found for IndicesController#webhook, rendering head :no_content
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 11ms (ActiveRecord: 7.9ms | Allocations: 23896)
+
+
+Completed 204 No Content in 11ms (ActiveRecord: 0.0ms | Allocations: 23592)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 10:08:29 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTa8FA9176QOxLn0iud97q0", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644966508, "data"=>{"object"=>{"id"=>"ch_3KTa8FA9176QOxLn0vsfCjj7", "object"=>"charge", "amount"=>2000, "amount_captured"=>2000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTa8FA9176QOxLn0WFZgthx", "billing_details"=>{"address"=>{"city"=>nil, "country"=>nil, "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>nil, "name"=>nil, "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644966508, "currency"=>"usd", "customer"=>nil, "description"=>"(created by Stripe CLI)", "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>57, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTa8FA9176QOxLn0sBqCSap", "payment_method"=>"pm_1KTa8FA9176QOxLnCiTcaQQp", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>nil}, "country"=>"US", "exp_month"=>2, "exp_year"=>2023, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTa8FA9176QOxLn0vsfCjj7/rcpt_L9twGLFZJLBMwRv481IAFATE4hdA0UD", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTa8FA9176QOxLn0vsfCjj7/refunds"}, "review"=>nil, "shipping"=>{"address"=>{"city"=>"San Francisco", "country"=>"US", "line1"=>"510 Townsend St", "line2"=>nil, "postal_code"=>"94103", "state"=>"CA"}, "carrier"=>nil, "name"=>"Jenny Rosen", "phone"=>nil, "tracking_number"=>nil}, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_6oX0RbWRIsdBPf", "idempotency_key"=>"[FILTERED]"}, "type"=>"charge.succeeded", "index"=>{"id"=>"evt_3KTa8FA9176QOxLn0iud97q0"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 603696ms (ActiveRecord: 6.8ms | Allocations: 144033)
+
+
+Started GET "/" for ::1 at 2022-02-16 10:18:33 +1100
+Started GET "/" for ::1 at 2022-02-16 10:18:33 +1100
+Processing by IndicesController#index as HTML
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 80.7ms | Allocations: 110050)
+  Rendered indices/index.html.erb within layouts/application (Duration: 81.0ms | Allocations: 110320)
+  Rendered layout layouts/application.html.erb (Duration: 106.5ms | Allocations: 155392)
+  Rendered layout layouts/application.html.erb (Duration: 106.7ms | Allocations: 155599)
+Completed 200 OK in 112ms (Views: 109.3ms | ActiveRecord: 0.0ms | Allocations: 160104)
+
+
+Completed 200 OK in 112ms (Views: 109.3ms | ActiveRecord: 0.0ms | Allocations: 160152)
+
+
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 10:18:33 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:18:33 +1100
+Started GET "/js/jquery-3.1.1.min.js" for ::1 at 2022-02-16 10:18:33 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/jquery-3.1.1.min.js"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 10:18:33 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started GET "/js/parallax.js" for ::1 at 2022-02-16 10:18:33 +1100
+Started GET "/js/smooth-scroll.min.js" for ::1 at 2022-02-16 10:18:33 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/parallax.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/js/smooth-scroll.min.js"):
+  
+Started GET "/js/scripts.js" for ::1 at 2022-02-16 10:18:33 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/js/scripts.js"):
+  
+Started POST "/webhook" for ::1 at 2022-02-16 10:18:40 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTaI7A9176QOxLn00S0LWDo", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644967119, "data"=>{"object"=>{"id"=>"pi_3KTaI7A9176QOxLn0VlIf68n", "object"=>"payment_intent", "amount"=>3000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTaI7A9176QOxLn0VlIf68n"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644967119, "currency"=>"aud", "customer"=>nil, "description"=>nil, "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>nil, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>nil, "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTaI7A9176QOxLn00S0LWDo"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 12ms (ActiveRecord: 3.9ms | Allocations: 3277)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 10:19:09 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_1KTaIbA9176QOxLnW60jTmBv", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644967147, "data"=>{"object"=>{"id"=>"cus_L9u6BgpHiekOR4", "object"=>"customer", "address"=>{"city"=>nil, "country"=>"AU", "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "balance"=>0, "created"=>1644967147, "currency"=>nil, "default_source"=>nil, "delinquent"=>false, "description"=>nil, "discount"=>nil, "email"=>"theeufj@gmail.com", "invoice_prefix"=>"53EA1105", "invoice_settings"=>{"custom_fields"=>nil, "default_payment_method"=>nil, "footer"=>nil}, "livemode"=>false, "metadata"=>{}, "name"=>"Joshua", "next_invoice_sequence"=>1, "phone"=>"+61423934037", "preferred_locales"=>[], "shipping"=>nil, "tax_exempt"=>"none"}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_Lwzh0fKKRXbuNl", "idempotency_key"=>"[FILTERED]"}, "type"=>"customer.created", "index"=>{"id"=>"evt_1KTaIbA9176QOxLnW60jTmBv"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 4ms (ActiveRecord: 0.0ms | Allocations: 2558)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 10:19:09 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTaI7A9176QOxLn0pThsjHS", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644967148, "data"=>{"object"=>{"id"=>"pi_3KTaI7A9176QOxLn0VlIf68n", "object"=>"payment_intent", "amount"=>3000, "amount_capturable"=>0, "amount_received"=>3000, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[{"id"=>"ch_3KTaI7A9176QOxLn0luZ7gRa", "object"=>"charge", "amount"=>3000, "amount_captured"=>3000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTaI7A9176QOxLn00jYMRUU", "billing_details"=>{"address"=>{"city"=>nil, "country"=>"AU", "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>"theeufj@gmail.com", "name"=>"Joshua", "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644967148, "currency"=>"aud", "customer"=>"cus_L9u6BgpHiekOR4", "description"=>nil, "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>37, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTaI7A9176QOxLn0VlIf68n", "payment_method"=>"pm_1KTaIYA9176QOxLny7eQAO8Y", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>"pass"}, "country"=>"US", "exp_month"=>2, "exp_year"=>2044, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTaI7A9176QOxLn0luZ7gRa/rcpt_L9u6gZ4x3mOhgMsFwf4ZyLtyUvY03m8", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTaI7A9176QOxLn0luZ7gRa/refunds"}, "review"=>nil, "shipping"=>nil, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}], "has_more"=>false, "total_count"=>1, "url"=>"/v1/charges?payment_intent=pi_3KTaI7A9176QOxLn0VlIf68n"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644967119, "currency"=>"aud", "customer"=>"cus_L9u6BgpHiekOR4", "description"=>nil, "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>"pm_1KTaIYA9176QOxLny7eQAO8Y", "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>nil, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_Lwzh0fKKRXbuNl", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.succeeded", "index"=>{"id"=>"evt_3KTaI7A9176QOxLn0pThsjHS"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 8033)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 10:19:09 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTaI7A9176QOxLn0AhQK9fJ", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644967148, "data"=>{"object"=>{"id"=>"ch_3KTaI7A9176QOxLn0luZ7gRa", "object"=>"charge", "amount"=>3000, "amount_captured"=>3000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTaI7A9176QOxLn00jYMRUU", "billing_details"=>{"address"=>{"city"=>nil, "country"=>"AU", "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>"theeufj@gmail.com", "name"=>"Joshua", "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644967148, "currency"=>"aud", "customer"=>"cus_L9u6BgpHiekOR4", "description"=>nil, "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>37, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTaI7A9176QOxLn0VlIf68n", "payment_method"=>"pm_1KTaIYA9176QOxLny7eQAO8Y", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>"pass"}, "country"=>"US", "exp_month"=>2, "exp_year"=>2044, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTaI7A9176QOxLn0luZ7gRa/rcpt_L9u6gZ4x3mOhgMsFwf4ZyLtyUvY03m8", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTaI7A9176QOxLn0luZ7gRa/refunds"}, "review"=>nil, "shipping"=>nil, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_Lwzh0fKKRXbuNl", "idempotency_key"=>"[FILTERED]"}, "type"=>"charge.succeeded", "index"=>{"id"=>"evt_3KTaI7A9176QOxLn0AhQK9fJ"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 5268)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 10:19:09 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_1KTaIbA9176QOxLnY6nLu23R", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644967149, "data"=>{"object"=>{"id"=>"cs_test_a1ElZbP62SyZzdIDbe8lJg0ooCijrc8nVsn1mjz8s1Vj37zqdSyOTmfogh", "object"=>"checkout.session", "after_expiration"=>nil, "allow_promotion_codes"=>false, "amount_subtotal"=>3000, "amount_total"=>3000, "automatic_tax"=>{"enabled"=>false, "status"=>nil}, "billing_address_collection"=>"auto", "cancel_url"=>"https://stripe.com", "client_reference_id"=>nil, "consent"=>nil, "consent_collection"=>nil, "currency"=>"aud", "customer"=>"cus_L9u6BgpHiekOR4", "customer_creation"=>"always", "customer_details"=>{"email"=>"theeufj@gmail.com", "phone"=>"+61423934037", "tax_exempt"=>"none", "tax_ids"=>[]}, "customer_email"=>nil, "expires_at"=>1645053519, "livemode"=>false, "locale"=>"auto", "metadata"=>{}, "mode"=>"payment", "payment_intent"=>"pi_3KTaI7A9176QOxLn0VlIf68n", "payment_link"=>"plink_1KSfxlA9176QOxLnrzdtaN0r", "payment_method_options"=>{}, "payment_method_types"=>["card"], "payment_status"=>"paid", "phone_number_collection"=>{"enabled"=>true}, "recovered_from"=>nil, "setup_intent"=>nil, "shipping"=>nil, "shipping_address_collection"=>nil, "shipping_options"=>[], "shipping_rate"=>nil, "status"=>"complete", "submit_type"=>nil, "subscription"=>nil, "success_url"=>"https://stripe.com", "total_details"=>{"amount_discount"=>0, "amount_shipping"=>0, "amount_tax"=>0}, "url"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>nil, "idempotency_key"=>"[FILTERED]"}, "type"=>"checkout.session.completed", "index"=>{"id"=>"evt_1KTaIbA9176QOxLnY6nLu23R"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 7ms (ActiveRecord: 0.0ms | Allocations: 3756)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 10:20:35 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTaJzA9176QOxLn1OfDrgsR", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644967235, "data"=>{"object"=>{"id"=>"pi_3KTaJzA9176QOxLn1HVBbAit", "object"=>"payment_intent", "amount"=>3000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTaJzA9176QOxLn1HVBbAit"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644967235, "currency"=>"aud", "customer"=>nil, "description"=>nil, "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>nil, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>nil, "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTaJzA9176QOxLn1OfDrgsR"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 3.6ms | Allocations: 3388)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 10:20:46 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_1KTaKAA9176QOxLnXiBbt9I6", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644967244, "data"=>{"object"=>{"id"=>"cus_L9u8XX284D1Y7Y", "object"=>"customer", "address"=>{"city"=>nil, "country"=>"AU", "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "balance"=>0, "created"=>1644967244, "currency"=>nil, "default_source"=>nil, "delinquent"=>false, "description"=>nil, "discount"=>nil, "email"=>"theeufj@gmail.com", "invoice_prefix"=>"127A5389", "invoice_settings"=>{"custom_fields"=>nil, "default_payment_method"=>nil, "footer"=>nil}, "livemode"=>false, "metadata"=>{}, "name"=>"Joshua", "next_invoice_sequence"=>1, "phone"=>"+61423934037", "preferred_locales"=>[], "shipping"=>nil, "tax_exempt"=>"none"}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_oqfBR9tOvVV6qM", "idempotency_key"=>"[FILTERED]"}, "type"=>"customer.created", "index"=>{"id"=>"evt_1KTaKAA9176QOxLnXiBbt9I6"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 2496)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 10:20:46 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTaJzA9176QOxLn1mqpg0Pb", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644967246, "data"=>{"object"=>{"id"=>"pi_3KTaJzA9176QOxLn1HVBbAit", "object"=>"payment_intent", "amount"=>3000, "amount_capturable"=>0, "amount_received"=>3000, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[{"id"=>"ch_3KTaJzA9176QOxLn1Wg6wNqU", "object"=>"charge", "amount"=>3000, "amount_captured"=>3000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTaJzA9176QOxLn1tecAyQd", "billing_details"=>{"address"=>{"city"=>nil, "country"=>"AU", "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>"theeufj@gmail.com", "name"=>"Joshua", "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644967245, "currency"=>"aud", "customer"=>"cus_L9u8XX284D1Y7Y", "description"=>nil, "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>59, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTaJzA9176QOxLn1HVBbAit", "payment_method"=>"pm_1KTaK8A9176QOxLnLTsKspQU", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>"pass"}, "country"=>"US", "exp_month"=>2, "exp_year"=>2044, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTaJzA9176QOxLn1Wg6wNqU/rcpt_L9u8PDnggSNEqajZSS99S2fVIT0TzNh", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTaJzA9176QOxLn1Wg6wNqU/refunds"}, "review"=>nil, "shipping"=>nil, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}], "has_more"=>false, "total_count"=>1, "url"=>"/v1/charges?payment_intent=pi_3KTaJzA9176QOxLn1HVBbAit"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644967235, "currency"=>"aud", "customer"=>"cus_L9u8XX284D1Y7Y", "description"=>nil, "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>"pm_1KTaK8A9176QOxLnLTsKspQU", "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>nil, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_oqfBR9tOvVV6qM", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.succeeded", "index"=>{"id"=>"evt_3KTaJzA9176QOxLn1mqpg0Pb"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 5ms (ActiveRecord: 0.0ms | Allocations: 8033)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 10:20:46 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTaJzA9176QOxLn1xoH5adC", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644967245, "data"=>{"object"=>{"id"=>"ch_3KTaJzA9176QOxLn1Wg6wNqU", "object"=>"charge", "amount"=>3000, "amount_captured"=>3000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTaJzA9176QOxLn1tecAyQd", "billing_details"=>{"address"=>{"city"=>nil, "country"=>"AU", "line1"=>nil, "line2"=>nil, "postal_code"=>nil, "state"=>nil}, "email"=>"theeufj@gmail.com", "name"=>"Joshua", "phone"=>nil}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644967245, "currency"=>"aud", "customer"=>"cus_L9u8XX284D1Y7Y", "description"=>nil, "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>59, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTaJzA9176QOxLn1HVBbAit", "payment_method"=>"pm_1KTaK8A9176QOxLnLTsKspQU", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>nil, "cvc_check"=>"pass"}, "country"=>"US", "exp_month"=>2, "exp_year"=>2044, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"4242", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>nil}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTaJzA9176QOxLn1Wg6wNqU/rcpt_L9u8PDnggSNEqajZSS99S2fVIT0TzNh", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTaJzA9176QOxLn1Wg6wNqU/refunds"}, "review"=>nil, "shipping"=>nil, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_oqfBR9tOvVV6qM", "idempotency_key"=>"[FILTERED]"}, "type"=>"charge.succeeded", "index"=>{"id"=>"evt_3KTaJzA9176QOxLn1xoH5adC"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 230068ms (ActiveRecord: 0.0ms | Allocations: 179303)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCustomers (20220215232512)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCustomers (20220215232512)
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "customers" ("id" bigserial primary key, "first_name" character varying, "email" character varying, "linked_in_profile" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-02-16 10:37:59 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20220215232512_create_customers.rb
+
+
+):
+  
+activerecord (7.0.2.2) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.2.2) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.2.2) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.2.2) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.2.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.2.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:131:in `call'
+railties (7.0.2.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/rails/actions" for ::1 at 2022-02-16 10:38:01 +1100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCustomers (20220215232512)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "customers" ("id" bigserial primary key, "first_name" character varying, "email" character varying, "linked_in_profile" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  
+StandardError (An error has occurred, this and all later migrations canceled:
+
+PG::DuplicateTable: ERROR:  relation "customers" already exists
+):
+  
+activerecord (7.0.2.2) lib/active_record/connection_adapters/postgresql/database_statements.rb:48:in `exec'
+activerecord (7.0.2.2) lib/active_record/connection_adapters/postgresql/database_statements.rb:48:in `block (2 levels) in execute'
+activesupport (7.0.2.2) lib/active_support/concurrency/share_lock.rb:187:in `yield_shares'
+activesupport (7.0.2.2) lib/active_support/dependencies/interlock.rb:41:in `permit_concurrent_loads'
+activerecord (7.0.2.2) lib/active_record/connection_adapters/postgresql/database_statements.rb:47:in `block in execute'
+activesupport (7.0.2.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `handle_interrupt'
+activesupport (7.0.2.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `block in synchronize'
+activesupport (7.0.2.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `handle_interrupt'
+activesupport (7.0.2.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `synchronize'
+activerecord (7.0.2.2) lib/active_record/connection_adapters/abstract_adapter.rb:765:in `block in log'
+activesupport (7.0.2.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activerecord (7.0.2.2) lib/active_record/connection_adapters/abstract_adapter.rb:756:in `log'
+activerecord (7.0.2.2) lib/active_record/connection_adapters/postgresql/database_statements.rb:46:in `execute'
+activerecord (7.0.2.2) lib/active_record/connection_adapters/abstract/schema_statements.rb:325:in `create_table'
+activerecord (7.0.2.2) lib/active_record/migration.rb:931:in `block in method_missing'
+activerecord (7.0.2.2) lib/active_record/migration.rb:899:in `block in say_with_time'
+/Users/josh/.asdf/installs/ruby/3.0.3/lib/ruby/3.0.0/benchmark.rb:293:in `measure'
+activerecord (7.0.2.2) lib/active_record/migration.rb:899:in `say_with_time'
+activerecord (7.0.2.2) lib/active_record/migration.rb:920:in `method_missing'
+db/migrate/20220215232512_create_customers.rb:3:in `change'
+activerecord (7.0.2.2) lib/active_record/migration.rb:869:in `exec_migration'
+activerecord (7.0.2.2) lib/active_record/migration.rb:853:in `block (2 levels) in migrate'
+/Users/josh/.asdf/installs/ruby/3.0.3/lib/ruby/3.0.0/benchmark.rb:293:in `measure'
+activerecord (7.0.2.2) lib/active_record/migration.rb:852:in `block in migrate'
+activerecord (7.0.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:215:in `with_connection'
+activerecord (7.0.2.2) lib/active_record/migration.rb:851:in `migrate'
+activerecord (7.0.2.2) lib/active_record/migration.rb:1045:in `migrate'
+activerecord (7.0.2.2) lib/active_record/migration.rb:1359:in `block in execute_migration_in_transaction'
+activerecord (7.0.2.2) lib/active_record/connection_adapters/abstract/transaction.rb:319:in `block in within_new_transaction'
+activesupport (7.0.2.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `handle_interrupt'
+activesupport (7.0.2.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `block in synchronize'
+activesupport (7.0.2.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `handle_interrupt'
+activesupport (7.0.2.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `synchronize'
+activerecord (7.0.2.2) lib/active_record/connection_adapters/abstract/transaction.rb:317:in `within_new_transaction'
+activerecord (7.0.2.2) lib/active_record/connection_adapters/abstract/database_statements.rb:316:in `transaction'
+activerecord (7.0.2.2) lib/active_record/transactions.rb:209:in `transaction'
+activerecord (7.0.2.2) lib/active_record/migration.rb:1410:in `ddl_transaction'
+activerecord (7.0.2.2) lib/active_record/migration.rb:1358:in `execute_migration_in_transaction'
+activerecord (7.0.2.2) lib/active_record/migration.rb:1332:in `each'
+activerecord (7.0.2.2) lib/active_record/migration.rb:1332:in `migrate_without_lock'
+activerecord (7.0.2.2) lib/active_record/migration.rb:1281:in `block in migrate'
+activerecord (7.0.2.2) lib/active_record/migration.rb:1431:in `block in with_advisory_lock'
+activerecord (7.0.2.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:215:in `with_connection'
+activerecord (7.0.2.2) lib/active_record/migration.rb:1446:in `with_advisory_lock_connection'
+activerecord (7.0.2.2) lib/active_record/migration.rb:1427:in `with_advisory_lock'
+activerecord (7.0.2.2) lib/active_record/migration.rb:1281:in `migrate'
+activerecord (7.0.2.2) lib/active_record/migration.rb:1116:in `up'
+activerecord (7.0.2.2) lib/active_record/migration.rb:1091:in `migrate'
+activerecord (7.0.2.2) lib/active_record/tasks/database_tasks.rb:260:in `migrate'
+activerecord (7.0.2.2) lib/active_record/migration.rb:137:in `block in <class:PendingMigrationError>'
+activesupport (7.0.2.2) lib/active_support/actionable_error.rb:28:in `dispatch'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:19:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:131:in `call'
+railties (7.0.2.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCustomers (20220215232512)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "customers" ("id" bigserial primary key, "first_name" character varying, "email" character varying, "linked_in_profile" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCustomers (20220215232512)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.8ms)[0m  [1m[35mDROP TABLE "customers"[0m
+  [1m[36mActiveRecord::SchemaMigration Create (4.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220215232512"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCustomers (20220215234109)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "customers" ("id" bigserial primary key, "first_name" character varying, "email" character varying, "linked_in_profile" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220215234109"]]
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/rails/actions" for ::1 at 2022-02-16 10:45:26 +1100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-02-16 10:45:26 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 176.3ms | Allocations: 92509)
+  Rendered layout layouts/application.html.erb (Duration: 192.6ms | Allocations: 117868)
+Completed 200 OK in 200ms (Views: 194.7ms | ActiveRecord: 0.0ms | Allocations: 124541)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:45:27 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 10:45:27 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 10:45:27 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started POST "/webhook" for ::1 at 2022-02-16 10:45:43 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTaiJA9176QOxLn0m1GOqYq", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644968743, "data"=>{"object"=>{"id"=>"pi_3KTaiJA9176QOxLn0DWAJyz9", "object"=>"payment_intent", "amount"=>3000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTaiJA9176QOxLn0DWAJyz9"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644968743, "currency"=>"aud", "customer"=>nil, "description"=>nil, "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>nil, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>nil, "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTaiJA9176QOxLn0m1GOqYq"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 4ms (ActiveRecord: 4.3ms | Allocations: 4068)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 10:47:11 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTajjA9176QOxLn0mc2mv75", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644968831, "data"=>{"object"=>{"id"=>"pi_3KTajjA9176QOxLn0DCWAD96", "object"=>"payment_intent", "amount"=>3000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTajjA9176QOxLn0DCWAD96"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644968831, "currency"=>"aud", "customer"=>nil, "description"=>nil, "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>nil, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>nil, "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTajjA9176QOxLn0mc2mv75"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 3485)
+
+
+Started GET "/" for ::1 at 2022-02-16 10:47:13 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 3912)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 14346)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 15549)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:47:13 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 10:47:14 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 10:47:14 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started POST "/webhook" for ::1 at 2022-02-16 10:47:16 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTajoA9176QOxLn1FFvzaUO", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644968836, "data"=>{"object"=>{"id"=>"pi_3KTajoA9176QOxLn1X8cgxHC", "object"=>"payment_intent", "amount"=>3000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTajoA9176QOxLn1X8cgxHC"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644968836, "currency"=>"aud", "customer"=>nil, "description"=>nil, "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>nil, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>nil, "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTajoA9176QOxLn1FFvzaUO"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 3274)
+
+
+Started GET "/" for ::1 at 2022-02-16 10:48:14 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3917)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 14349)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms | Allocations: 15561)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:48:14 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 10:48:14 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 10:48:14 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started GET "/" for ::1 at 2022-02-16 10:48:57 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 3893)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 14304)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 15512)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:48:57 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started POST "/webhook" for ::1 at 2022-02-16 10:49:02 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTalVA9176QOxLn1OwdYzZ2", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644968941, "data"=>{"object"=>{"id"=>"pi_3KTalVA9176QOxLn1pexiXSD", "object"=>"payment_intent", "amount"=>3000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTalVA9176QOxLn1pexiXSD"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644968941, "currency"=>"aud", "customer"=>nil, "description"=>nil, "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>nil, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>nil, "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTalVA9176QOxLn1OwdYzZ2"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 4ms (ActiveRecord: 0.0ms | Allocations: 3539)
+
+
+Started GET "/" for ::1 at 2022-02-16 10:49:54 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 3894)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 14326)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 15538)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:49:54 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/?First_Name=&linked_in_profile=&Email_Address=contact%40moneyloop.com.au&Password-confirm=[FILTERED]" for ::1 at 2022-02-16 10:49:55 +1100
+Processing by IndicesController#index as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>"contact@moneyloop.com.au", "Password-confirm"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 3141)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 13003)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 13365)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:49:55 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/?First_Name=&linked_in_profile=&Email_Address=contact%40moneyloop.com.au&Password-confirm=[FILTERED]" for ::1 at 2022-02-16 10:50:18 +1100
+Processing by IndicesController#index as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>"contact@moneyloop.com.au", "Password-confirm"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 3158)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 13127)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 13469)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:50:18 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/?First_Name=&linked_in_profile=&Email_Address=&Password-confirm=" for ::1 at 2022-02-16 10:50:18 +1100
+Processing by IndicesController#index as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>"", "Password-confirm"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3164)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 13119)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 13465)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:50:18 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 10:50:20 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 10:50:20 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started GET "/?First_Name=&linked_in_profile=&Email_Address=&Password-confirm=" for ::1 at 2022-02-16 10:50:24 +1100
+Processing by IndicesController#index as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>"", "Password-confirm"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 3155)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 13114)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 13462)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:50:25 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/?First_Name=&linked_in_profile=&Email_Address=contact%40moneyloop.com.au&Password-confirm=[FILTERED]" for ::1 at 2022-02-16 10:50:26 +1100
+Processing by IndicesController#index as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>"contact@moneyloop.com.au", "Password-confirm"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 3160)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 13119)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 13462)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:50:27 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/?First_Name=&linked_in_profile=&Email_Address=contact%40moneyloop.com.au&Password-confirm=[FILTERED]" for ::1 at 2022-02-16 10:51:42 +1100
+Processing by IndicesController#index as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>"contact@moneyloop.com.au", "Password-confirm"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 3891)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 14310)
+Completed 200 OK in 21ms (Views: 19.5ms | Allocations: 15487)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:51:42 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/?First_Name=&linked_in_profile=&Email_Address=contact%40moneyloop.com.au&Password-confirm=[FILTERED]" for ::1 at 2022-02-16 10:51:58 +1100
+Processing by IndicesController#index as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>"contact@moneyloop.com.au", "Password-confirm"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 3871)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 14218)
+Completed 200 OK in 20ms (Views: 18.4ms | Allocations: 15414)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:51:58 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/?First_Name=&linked_in_profile=&Email_Address=contact%40moneyloop.com.au&Password-confirm=[FILTERED]" for ::1 at 2022-02-16 10:52:09 +1100
+Processing by IndicesController#index as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>"contact@moneyloop.com.au", "Password-confirm"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 3888)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 14312)
+Completed 200 OK in 17ms (Views: 15.6ms | Allocations: 15510)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:52:09 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/?First_Name=&linked_in_profile=&Email_Address=" for ::1 at 2022-02-16 10:52:11 +1100
+Processing by IndicesController#index as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 3158)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 13119)
+Completed 200 OK in 15ms (Views: 14.4ms | Allocations: 13478)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:52:11 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/?First_Name=&linked_in_profile=&Email_Address=" for ::1 at 2022-02-16 10:53:04 +1100
+Processing by IndicesController#index as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 3888)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 14310)
+Completed 200 OK in 18ms (Views: 16.5ms | Allocations: 15487)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:53:04 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/?First_Name=&linked_in_profile=&Email_Address=" for ::1 at 2022-02-16 10:53:07 +1100
+Processing by IndicesController#index as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 3158)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 13118)
+Completed 200 OK in 17ms (Views: 16.2ms | Allocations: 13478)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:53:07 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/?First_Name=&linked_in_profile=&Email_Address=" for ::1 at 2022-02-16 10:53:27 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#index as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 44.9ms | Allocations: 44664)
+  Rendered layout layouts/application.html.erb (Duration: 57.2ms | Allocations: 70210)
+Completed 200 OK in 65ms (Views: 59.2ms | ActiveRecord: 0.0ms | Allocations: 76890)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:53:27 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/?First_Name=&linked_in_profile=&Email_Address=" for ::1 at 2022-02-16 10:54:54 +1100
+Processing by IndicesController#index as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3903)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 14354)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 15580)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:54:54 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 10:55:15 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 10:55:15 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started GET "/?First_Name=&linked_in_profile=&Email_Address=" for ::1 at 2022-02-16 10:57:25 +1100
+Processing by IndicesController#index as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 3881)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 14335)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 15542)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:57:25 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/?First_Name=&linked_in_profile=&Email_Address=" for ::1 at 2022-02-16 10:58:35 +1100
+Processing by IndicesController#index as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 3881)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 14338)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 15553)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:58:35 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/?First_Name=&linked_in_profile=&Email_Address=" for ::1 at 2022-02-16 10:59:09 +1100
+Processing by IndicesController#index as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3893)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 14335)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms | Allocations: 15543)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:59:09 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/action_page.php?fname=" for ::1 at 2022-02-16 10:59:13 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/action_page.php"):
+  
+Started GET "/action_page.php?fname=" for ::1 at 2022-02-16 10:59:45 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/action_page.php"):
+  
+Started GET "/?First_Name=&linked_in_profile=&Email_Address=" for ::1 at 2022-02-16 10:59:48 +1100
+Processing by IndicesController#index as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3881)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 14342)
+Completed 200 OK in 18ms (Views: 16.7ms | Allocations: 15508)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:59:48 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/" for ::1 at 2022-02-16 10:59:51 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 3163)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 13141)
+Completed 200 OK in 18ms (Views: 16.9ms | Allocations: 13497)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 10:59:51 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/" for ::1 at 2022-02-16 11:00:10 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3852)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 14287)
+Completed 200 OK in 17ms (Views: 15.2ms | Allocations: 15465)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 11:00:10 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/" for ::1 at 2022-02-16 11:00:38 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 3859)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 14210)
+Completed 200 OK in 21ms (Views: 19.7ms | Allocations: 15406)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 11:00:38 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/" for ::1 at 2022-02-16 11:01:02 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 3167)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 13149)
+Completed 200 OK in 19ms (Views: 17.9ms | Allocations: 13506)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 11:01:02 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/" for ::1 at 2022-02-16 11:01:07 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 3163)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 13156)
+Completed 200 OK in 21ms (Views: 20.0ms | Allocations: 13503)
+
+
+Started GET "/img/logo-light.png" for ::1 at 2022-02-16 11:01:07 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/img/logo-light.png"):
+  
+Started GET "/" for ::1 at 2022-02-16 11:01:47 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3867)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 14322)
+Completed 200 OK in 15ms (Views: 13.8ms | Allocations: 15499)
+
+
+Started GET "/customer_create?First_Name=&linked_in_profile=&Email_Address=&profile_picture=" for ::1 at 2022-02-16 11:02:25 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/customer_create"):
+  
+Started GET "/" for ::1 at 2022-02-16 11:03:04 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3845)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 14173)
+Completed 200 OK in 20ms (Views: 18.8ms | Allocations: 15370)
+
+
+Started POST "/customer_create" for ::1 at 2022-02-16 11:03:06 +1100
+  
+ActionController::RoutingError (No route matches [POST] "/customer_create"):
+  
+Started GET "/" for ::1 at 2022-02-16 11:03:35 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 3337)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 28097)
+Completed 200 OK in 14ms (Views: 13.1ms | Allocations: 29779)
+
+
+Started POST "/customer_create" for ::1 at 2022-02-16 11:03:38 +1100
+  
+ActionController::RoutingError (No route matches [POST] "/customer_create"):
+  
+Started POST "/customer_create" for ::1 at 2022-02-16 11:03:52 +1100
+  
+ActionController::RoutingError (No route matches [POST] "/customer_create"):
+  
+Started POST "/customer_create" for ::1 at 2022-02-16 11:04:12 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#create_customer as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>"", "profile_picture"=>""}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/indices_controller.rb:80:in `create_customer'
+  [1m[36mCustomer Create (4.4ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "email", "linked_in_profile", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", ""], ["email", ""], ["linked_in_profile", ""], ["created_at", "2022-02-16 00:04:18.636499"], ["updated_at", "2022-02-16 00:04:18.636499"]]
+  ↳ app/controllers/indices_controller.rb:80:in `create_customer'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/indices_controller.rb:80:in `create_customer'
+No template found for IndicesController#create_customer, rendering head :no_content
+Completed 204 No Content in 5586ms (ActiveRecord: 19.2ms | Allocations: 129878)
+
+
+Started GET "/" for ::1 at 2022-02-16 11:06:47 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 47.9ms | Allocations: 44506)
+  Rendered layout layouts/application.html.erb (Duration: 61.7ms | Allocations: 70030)
+Completed 200 OK in 68ms (Views: 64.8ms | ActiveRecord: 0.0ms | Allocations: 73473)
+
+
+Started GET "/" for ::1 at 2022-02-16 11:07:39 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 51.8ms | Allocations: 44616)
+  Rendered layout layouts/application.html.erb (Duration: 72.5ms | Allocations: 70156)
+Completed 200 OK in 79ms (Views: 74.3ms | ActiveRecord: 0.0ms | Allocations: 76836)
+
+
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 11:07:39 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 11:07:40 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started GET "/" for ::1 at 2022-02-16 11:08:01 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 3868)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 14313)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 15522)
+
+
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 11:08:05 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 11:08:05 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started GET "/" for ::1 at 2022-02-16 11:08:17 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 3167)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 13150)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 13522)
+
+
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 11:08:17 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 11:08:17 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started GET "/" for ::1 at 2022-02-16 11:08:46 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3871)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 14319)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 15511)
+
+
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 11:08:47 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 11:08:47 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started GET "/" for ::1 at 2022-02-16 11:09:04 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 3854)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 14190)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 15403)
+
+
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 11:09:04 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 11:09:04 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started GET "/" for ::1 at 2022-02-16 11:09:47 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 3835)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 14198)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 15404)
+
+
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 11:09:47 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 11:09:47 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started GET "/" for ::1 at 2022-02-16 11:10:01 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3864)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 14321)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 15529)
+
+
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 11:10:01 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 11:10:01 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started GET "/" for ::1 at 2022-02-16 11:10:53 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 3868)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 14219)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.0ms | Allocations: 15433)
+
+
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 11:10:53 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 11:10:54 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started GET "/" for ::1 at 2022-02-16 11:11:20 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 3876)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 14338)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms | Allocations: 15546)
+
+
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 11:11:20 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 11:11:20 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started GET "/" for ::1 at 2022-02-16 11:11:30 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 3876)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 14321)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 15528)
+
+
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 11:11:30 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 11:11:30 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started GET "/" for ::1 at 2022-02-16 11:12:13 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3881)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 14329)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 15537)
+
+
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 11:12:14 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 11:12:14 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started POST "/customer_create" for ::1 at 2022-02-16 11:12:15 +1100
+Processing by IndicesController#create_customer as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>"", "profile_picture"=>""}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/indices_controller.rb:80:in `create_customer'
+  [1m[36mCustomer Create (0.9ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "email", "linked_in_profile", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", ""], ["email", ""], ["linked_in_profile", ""], ["created_at", "2022-02-16 00:12:21.071270"], ["updated_at", "2022-02-16 00:12:21.071270"]]
+  ↳ app/controllers/indices_controller.rb:80:in `create_customer'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/indices_controller.rb:80:in `create_customer'
+No template found for IndicesController#create_customer, rendering head :no_content
+Completed 204 No Content in 5149ms (ActiveRecord: 19.6ms | Allocations: 127041)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 13:08:24 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTcwNA9176QOxLn00vmjGce", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644977303, "data"=>{"object"=>{"id"=>"pi_3KTcwNA9176QOxLn0vXdKayC", "object"=>"payment_intent", "amount"=>3000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTcwNA9176QOxLn0vXdKayC"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644977303, "currency"=>"aud", "customer"=>nil, "description"=>nil, "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>nil, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>nil, "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTcwNA9176QOxLn00vmjGce"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 24.2ms | Allocations: 3968)
+
+
+Started GET "/" for ::1 at 2022-02-16 13:08:59 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 81.0ms | Allocations: 44479)
+  Rendered layout layouts/application.html.erb (Duration: 96.1ms | Allocations: 69988)
+Completed 200 OK in 103ms (Views: 97.9ms | ActiveRecord: 0.0ms | Allocations: 76668)
+
+
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 13:09:00 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 13:09:00 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started POST "/customer_create" for ::1 at 2022-02-16 13:09:03 +1100
+Processing by IndicesController#create_customer as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>"", "profile_picture"=>""}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/indices_controller.rb:80:in `create_customer'
+  [1m[36mCustomer Create (0.8ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "email", "linked_in_profile", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", ""], ["email", ""], ["linked_in_profile", ""], ["created_at", "2022-02-16 02:09:07.247001"], ["updated_at", "2022-02-16 02:09:07.247001"]]
+  ↳ app/controllers/indices_controller.rb:80:in `create_customer'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/indices_controller.rb:80:in `create_customer'
+No template found for IndicesController#create_customer, rendering head :no_content
+Completed 204 No Content in 3480ms (ActiveRecord: 14.7ms | Allocations: 126536)
+
+
+Started POST "/customer_create" for ::1 at 2022-02-16 13:09:29 +1100
+Processing by IndicesController#create_customer as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>"", "profile_picture"=>""}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/indices_controller.rb:79:in `create_customer'
+  [1m[36mCustomer Create (0.4ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "email", "linked_in_profile", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", ""], ["email", ""], ["linked_in_profile", ""], ["created_at", "2022-02-16 02:09:42.993799"], ["updated_at", "2022-02-16 02:09:42.993799"]]
+  ↳ app/controllers/indices_controller.rb:79:in `create_customer'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/indices_controller.rb:79:in `create_customer'
+No template found for IndicesController#create_customer, rendering head :no_content
+Completed 204 No Content in 13754ms (ActiveRecord: 11.5ms | Allocations: 88798)
+
+
+Started POST "/customer_create" for ::1 at 2022-02-16 13:09:45 +1100
+Processing by IndicesController#create_customer as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>"", "profile_picture"=>""}
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+  [1m[36mCustomer Create (1.6ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "email", "linked_in_profile", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", ""], ["email", ""], ["linked_in_profile", ""], ["created_at", "2022-02-16 02:09:45.053106"], ["updated_at", "2022-02-16 02:09:45.053106"]]
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+No template found for IndicesController#create_customer, rendering head :no_content
+Completed 204 No Content in 24ms (ActiveRecord: 18.9ms | Allocations: 4563)
+
+
+Started GET "/" for ::1 at 2022-02-16 13:11:09 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 89.1ms | Allocations: 44198)
+  Rendered layout layouts/application.html.erb (Duration: 104.4ms | Allocations: 69674)
+Completed 200 OK in 112ms (Views: 106.5ms | ActiveRecord: 0.0ms | Allocations: 76354)
+
+
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 13:11:10 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 13:11:10 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started POST "/customer_create" for ::1 at 2022-02-16 13:11:11 +1100
+Processing by IndicesController#create_customer as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>"", "profile_picture"=>""}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+  [1m[36mCustomer Create (0.8ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "email", "linked_in_profile", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", ""], ["email", ""], ["linked_in_profile", ""], ["created_at", "2022-02-16 02:11:11.440904"], ["updated_at", "2022-02-16 02:11:11.440904"]]
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+Redirected to 
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 14.8ms | Allocations: 9225)
+
+
+  
+ActionController::Redirecting::UnsafeRedirectError (Unsafe redirect to "https://checkout.stripe.com/pay/cs_test_a1s5nRB8OyD2GKW1Gr7LOl452Oc5hxD5XlSIMr5sytMvmKZDykapyY5ST...", pass allow_other_host: true to redirect anyway.):
+  
+app/controllers/indices_controller.rb:79:in `create_customer'
+Started POST "/customer_create" for ::1 at 2022-02-16 13:11:42 +1100
+Processing by IndicesController#create_customer as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>"", "profile_picture"=>""}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+  [1m[36mCustomer Create (0.4ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "email", "linked_in_profile", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", ""], ["email", ""], ["linked_in_profile", ""], ["created_at", "2022-02-16 02:11:42.612612"], ["updated_at", "2022-02-16 02:11:42.612612"]]
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+Redirected to https://checkout.stripe.com/pay/cs_test_a1s5nRB8OyD2GKW1Gr7LOl452Oc5hxD5XlSIMr5sytMvmKZDykapyY5STA#fidkdWxOYHwnPyd1blpxYHZxWjA0TlZjczREPDQyM1RKfUlrRH9xS1J9c3VmU3NnaE1uM0BtQ2gwNmhXMmIzXXNdaUlqbGdofGJrYkZjS1FPMV1hR1N0YkxScDVLXDBGZmZUbGJqMEJkTk4zNTUySGNuMG1zaycpJ3VpbGtuQH11anZgYUxhJz8ncWB2cVpmSzc8QDMzTkFnUkg2cGJhVFQnKSd3YGNgd3dgdyc%2FJ21xcXV2PyoqZm1gZm5qcHErdnF3bHVgK2ZqaConeCUl
+Completed 302 Found in 14ms (ActiveRecord: 10.3ms | Allocations: 4584)
+
+
+Started GET "/" for ::1 at 2022-02-16 13:11:45 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 3342)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 28161)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.0ms | Allocations: 29519)
+
+
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 13:11:45 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 13:11:45 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started POST "/customer_create" for ::1 at 2022-02-16 13:11:47 +1100
+Processing by IndicesController#create_customer as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>"", "profile_picture"=>""}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+  [1m[36mCustomer Create (0.5ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "email", "linked_in_profile", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", ""], ["email", ""], ["linked_in_profile", ""], ["created_at", "2022-02-16 02:11:47.443125"], ["updated_at", "2022-02-16 02:11:47.443125"]]
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+Redirected to https://checkout.stripe.com/pay/cs_test_a1s5nRB8OyD2GKW1Gr7LOl452Oc5hxD5XlSIMr5sytMvmKZDykapyY5STA#fidkdWxOYHwnPyd1blpxYHZxWjA0TlZjczREPDQyM1RKfUlrRH9xS1J9c3VmU3NnaE1uM0BtQ2gwNmhXMmIzXXNdaUlqbGdofGJrYkZjS1FPMV1hR1N0YkxScDVLXDBGZmZUbGJqMEJkTk4zNTUySGNuMG1zaycpJ3VpbGtuQH11anZgYUxhJz8ncWB2cVpmSzc8QDMzTkFnUkg2cGJhVFQnKSd3YGNgd3dgdyc%2FJ21xcXV2PyoqZm1gZm5qcHErdnF3bHVgK2ZqaConeCUl
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms | Allocations: 2076)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 13:14:53 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_1KTd2fA9176QOxLnMd56ANAz", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644977691, "data"=>{"object"=>{"id"=>"cus_L9wwXarwHodrrg", "object"=>"customer", "address"=>{"city"=>nil, "country"=>"AU", "line1"=>nil, "line2"=>nil, "postal_code"=>"2009", "state"=>nil}, "balance"=>0, "created"=>1644977691, "currency"=>nil, "default_source"=>nil, "delinquent"=>false, "description"=>nil, "discount"=>nil, "email"=>"josh@mybond.com.au", "invoice_prefix"=>"81F1ECAE", "invoice_settings"=>{"custom_fields"=>nil, "default_payment_method"=>nil, "footer"=>nil}, "livemode"=>false, "metadata"=>{}, "name"=>"Joshua Theeuf", "next_invoice_sequence"=>1, "phone"=>"+61423934037", "preferred_locales"=>[], "shipping"=>nil, "tax_exempt"=>"none"}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_AZN3CK3KTzBWG9", "idempotency_key"=>"[FILTERED]"}, "type"=>"customer.created", "index"=>{"id"=>"evt_1KTd2fA9176QOxLnMd56ANAz"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 6.9ms | Allocations: 3391)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 13:14:53 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTcyPA9176QOxLn0JMkulcy", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644977692, "data"=>{"object"=>{"id"=>"pi_3KTcyPA9176QOxLn0BIqs4fp", "object"=>"payment_intent", "amount"=>3000, "amount_capturable"=>0, "amount_received"=>3000, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[{"id"=>"ch_3KTcyPA9176QOxLn0hIIe0v8", "object"=>"charge", "amount"=>3000, "amount_captured"=>3000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTcyPA9176QOxLn0b7jZOrC", "billing_details"=>{"address"=>{"city"=>nil, "country"=>"AU", "line1"=>nil, "line2"=>nil, "postal_code"=>"2009", "state"=>nil}, "email"=>"josh@mybond.com.au", "name"=>"Joshua Theeuf", "phone"=>"+61 423 934 037"}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644977692, "currency"=>"aud", "customer"=>"cus_L9wwXarwHodrrg", "description"=>nil, "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>31, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTcyPA9176QOxLn0BIqs4fp", "payment_method"=>"pm_1KTd2dA9176QOxLnvfZWuix9", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>"pass", "cvc_check"=>nil}, "country"=>"US", "exp_month"=>5, "exp_year"=>2026, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"2446", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>{"dynamic_last4"=>"4242", "google_pay"=>{}, "type"=>"google_pay"}}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTcyPA9176QOxLn0hIIe0v8/rcpt_L9wwWMOpaGE8N3DRC2Gol3ypzAF7k3v", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTcyPA9176QOxLn0hIIe0v8/refunds"}, "review"=>nil, "shipping"=>nil, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}], "has_more"=>false, "total_count"=>1, "url"=>"/v1/charges?payment_intent=pi_3KTcyPA9176QOxLn0BIqs4fp"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644977429, "currency"=>"aud", "customer"=>"cus_L9wwXarwHodrrg", "description"=>nil, "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>"pm_1KTd2dA9176QOxLnvfZWuix9", "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>nil, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_AZN3CK3KTzBWG9", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.succeeded", "index"=>{"id"=>"evt_3KTcyPA9176QOxLn0JMkulcy"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 7ms (ActiveRecord: 0.0ms | Allocations: 8816)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 13:14:53 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTcyPA9176QOxLn0cTlXuA2", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644977692, "data"=>{"object"=>{"id"=>"ch_3KTcyPA9176QOxLn0hIIe0v8", "object"=>"charge", "amount"=>3000, "amount_captured"=>3000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTcyPA9176QOxLn0b7jZOrC", "billing_details"=>{"address"=>{"city"=>nil, "country"=>"AU", "line1"=>nil, "line2"=>nil, "postal_code"=>"2009", "state"=>nil}, "email"=>"josh@mybond.com.au", "name"=>"Joshua Theeuf", "phone"=>"+61 423 934 037"}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644977692, "currency"=>"aud", "customer"=>"cus_L9wwXarwHodrrg", "description"=>nil, "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>31, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTcyPA9176QOxLn0BIqs4fp", "payment_method"=>"pm_1KTd2dA9176QOxLnvfZWuix9", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>nil, "address_postal_code_check"=>"pass", "cvc_check"=>nil}, "country"=>"US", "exp_month"=>5, "exp_year"=>2026, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"2446", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>{"dynamic_last4"=>"4242", "google_pay"=>{}, "type"=>"google_pay"}}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTcyPA9176QOxLn0hIIe0v8/rcpt_L9wwWMOpaGE8N3DRC2Gol3ypzAF7k3v", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTcyPA9176QOxLn0hIIe0v8/refunds"}, "review"=>nil, "shipping"=>nil, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>3, "request"=>{"id"=>"req_AZN3CK3KTzBWG9", "idempotency_key"=>"[FILTERED]"}, "type"=>"charge.succeeded", "index"=>{"id"=>"evt_3KTcyPA9176QOxLn0cTlXuA2"}}
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."email" = $1 LIMIT $2[0m  [["email", "josh@mybond.com.au"], ["LIMIT", 1]]
+  ↳ app/controllers/indices_controller.rb:57:in `webhook'
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 15ms (ActiveRecord: 3.4ms | Allocations: 9068)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 13:14:53 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_1KTd2fA9176QOxLnc5faB1iX", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644977693, "data"=>{"object"=>{"id"=>"cs_test_a1s5nRB8OyD2GKW1Gr7LOl452Oc5hxD5XlSIMr5sytMvmKZDykapyY5STA", "object"=>"checkout.session", "after_expiration"=>nil, "allow_promotion_codes"=>false, "amount_subtotal"=>3000, "amount_total"=>3000, "automatic_tax"=>{"enabled"=>false, "status"=>nil}, "billing_address_collection"=>"auto", "cancel_url"=>"https://stripe.com", "client_reference_id"=>nil, "consent"=>nil, "consent_collection"=>nil, "currency"=>"aud", "customer"=>"cus_L9wwXarwHodrrg", "customer_creation"=>"always", "customer_details"=>{"email"=>"josh@mybond.com.au", "phone"=>"+61423934037", "tax_exempt"=>"none", "tax_ids"=>[]}, "customer_email"=>nil, "expires_at"=>1645063829, "livemode"=>false, "locale"=>"auto", "metadata"=>{}, "mode"=>"payment", "payment_intent"=>"pi_3KTcyPA9176QOxLn0BIqs4fp", "payment_link"=>"plink_1KSfxlA9176QOxLnrzdtaN0r", "payment_method_options"=>{}, "payment_method_types"=>["card"], "payment_status"=>"paid", "phone_number_collection"=>{"enabled"=>true}, "recovered_from"=>nil, "setup_intent"=>nil, "shipping"=>nil, "shipping_address_collection"=>nil, "shipping_options"=>[], "shipping_rate"=>nil, "status"=>"complete", "submit_type"=>nil, "subscription"=>nil, "success_url"=>"https://stripe.com", "total_details"=>{"amount_discount"=>0, "amount_shipping"=>0, "amount_tax"=>0}, "url"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>nil, "idempotency_key"=>"[FILTERED]"}, "type"=>"checkout.session.completed", "index"=>{"id"=>"evt_1KTd2fA9176QOxLnc5faB1iX"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 3807)
+
+
+Started GET "/" for ::1 at 2022-02-16 13:15:40 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 3341)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 27999)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms | Allocations: 28924)
+
+
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 13:15:40 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 13:15:40 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started POST "/customer_create" for ::1 at 2022-02-16 13:16:14 +1100
+Processing by IndicesController#create_customer as HTML
+  Parameters: {"First_Name"=>"joshua", "linked_in_profile"=>"www.google.com.au", "Email_Address"=>"theeufj@gmail.com", "profile_picture"=>""}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+  [1m[36mCustomer Create (0.7ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "email", "linked_in_profile", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "joshua"], ["email", "theeufj@gmail.com"], ["linked_in_profile", "www.google.com.au"], ["created_at", "2022-02-16 02:16:14.956911"], ["updated_at", "2022-02-16 02:16:14.956911"]]
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+Redirected to https://checkout.stripe.com/pay/cs_test_a1s5nRB8OyD2GKW1Gr7LOl452Oc5hxD5XlSIMr5sytMvmKZDykapyY5STA#fidkdWxOYHwnPyd1blpxYHZxWjA0TlZjczREPDQyM1RKfUlrRH9xS1J9c3VmU3NnaE1uM0BtQ2gwNmhXMmIzXXNdaUlqbGdofGJrYkZjS1FPMV1hR1N0YkxScDVLXDBGZmZUbGJqMEJkTk4zNTUySGNuMG1zaycpJ3VpbGtuQH11anZgYUxhJz8ncWB2cVpmSzc8QDMzTkFnUkg2cGJhVFQnKSd3YGNgd3dgdyc%2FJ21xcXV2PyoqZm1gZm5qcHErdnF3bHVgK2ZqaConeCUl
+Completed 302 Found in 19ms (ActiveRecord: 9.9ms | Allocations: 3310)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 13:16:18 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTd41A9176QOxLn10Zak8Mn", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644977777, "data"=>{"object"=>{"id"=>"pi_3KTd41A9176QOxLn1umHfUtF", "object"=>"payment_intent", "amount"=>3000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTd41A9176QOxLn1umHfUtF"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644977777, "currency"=>"aud", "customer"=>nil, "description"=>nil, "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>nil, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>nil, "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTd41A9176QOxLn10Zak8Mn"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 5ms (ActiveRecord: 0.0ms | Allocations: 3270)
+
+
+Started GET "/" for ::1 at 2022-02-16 13:16:34 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 3168)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 13156)
+Completed 200 OK in 16ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 13510)
+
+
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 13:16:35 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 13:16:35 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started POST "/customer_create" for ::1 at 2022-02-16 13:16:36 +1100
+Processing by IndicesController#create_customer as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>"", "profile_picture"=>""}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+  [1m[36mCustomer Create (0.4ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "email", "linked_in_profile", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", ""], ["email", ""], ["linked_in_profile", ""], ["created_at", "2022-02-16 02:16:36.292605"], ["updated_at", "2022-02-16 02:16:36.292605"]]
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+Redirected to https://checkout.stripe.com/pay/cs_test_a1s5nRB8OyD2GKW1Gr7LOl452Oc5hxD5XlSIMr5sytMvmKZDykapyY5STA#fidkdWxOYHwnPyd1blpxYHZxWjA0TlZjczREPDQyM1RKfUlrRH9xS1J9c3VmU3NnaE1uM0BtQ2gwNmhXMmIzXXNdaUlqbGdofGJrYkZjS1FPMV1hR1N0YkxScDVLXDBGZmZUbGJqMEJkTk4zNTUySGNuMG1zaycpJ3VpbGtuQH11anZgYUxhJz8ncWB2cVpmSzc8QDMzTkFnUkg2cGJhVFQnKSd3YGNgd3dgdyc%2FJ21xcXV2PyoqZm1gZm5qcHErdnF3bHVgK2ZqaConeCUl
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms | Allocations: 1957)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 13:16:43 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTd4RA9176QOxLn0vZ59lJQ", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644977803, "data"=>{"object"=>{"id"=>"pi_3KTd4RA9176QOxLn08tYEgwI", "object"=>"payment_intent", "amount"=>3000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTd4RA9176QOxLn08tYEgwI"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644977803, "currency"=>"aud", "customer"=>nil, "description"=>nil, "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>nil, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>nil, "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTd4RA9176QOxLn0vZ59lJQ"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 3223)
+
+
+Started GET "/" for ::1 at 2022-02-16 13:17:44 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 3342)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 28101)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 29796)
+
+
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 13:17:44 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 13:17:44 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started POST "/customer_create" for ::1 at 2022-02-16 13:17:46 +1100
+Processing by IndicesController#create_customer as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>"", "profile_picture"=>""}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+  [1m[36mCustomer Create (0.6ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "email", "linked_in_profile", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", ""], ["email", ""], ["linked_in_profile", ""], ["created_at", "2022-02-16 02:17:46.311808"], ["updated_at", "2022-02-16 02:17:46.311808"]]
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+Redirected to https://buy.stripe.com/test_cN29E66KDbWM3ugdQQ
+Completed 302 Found in 25ms (ActiveRecord: 13.5ms | Allocations: 4203)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 13:17:47 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTd5TA9176QOxLn1Emjk9G6", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644977867, "data"=>{"object"=>{"id"=>"pi_3KTd5TA9176QOxLn1fjAkKbu", "object"=>"payment_intent", "amount"=>3000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTd5TA9176QOxLn1fjAkKbu"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644977867, "currency"=>"aud", "customer"=>nil, "description"=>nil, "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>nil, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>nil, "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTd5TA9176QOxLn1Emjk9G6"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 4ms (ActiveRecord: 2.1ms | Allocations: 3281)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 13:18:15 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_1KTd5vA9176QOxLnbFnNyhpM", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644977893, "data"=>{"object"=>{"id"=>"cus_L9wz7JqDG1S3YT", "object"=>"customer", "address"=>{"city"=>"Pyrmont", "country"=>"AU", "line1"=>"1 Wattle Crescent", "line2"=>"516", "postal_code"=>"2009", "state"=>"NSW"}, "balance"=>0, "created"=>1644977893, "currency"=>nil, "default_source"=>nil, "delinquent"=>false, "description"=>nil, "discount"=>nil, "email"=>"theeufj@gmail.com", "invoice_prefix"=>"38A04A05", "invoice_settings"=>{"custom_fields"=>nil, "default_payment_method"=>nil, "footer"=>nil}, "livemode"=>false, "metadata"=>{}, "name"=>"Joshua Theeuf", "next_invoice_sequence"=>1, "phone"=>"+61423934037", "preferred_locales"=>[], "shipping"=>nil, "tax_exempt"=>"none"}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_9TDqIehSd2aRKf", "idempotency_key"=>"[FILTERED]"}, "type"=>"customer.created", "index"=>{"id"=>"evt_1KTd5vA9176QOxLnbFnNyhpM"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 2506)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 13:18:15 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTd5TA9176QOxLn19tgt8CO", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644977894, "data"=>{"object"=>{"id"=>"pi_3KTd5TA9176QOxLn1fjAkKbu", "object"=>"payment_intent", "amount"=>3000, "amount_capturable"=>0, "amount_received"=>3000, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[{"id"=>"ch_3KTd5TA9176QOxLn19WYoe9r", "object"=>"charge", "amount"=>3000, "amount_captured"=>3000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTd5TA9176QOxLn1p7giYkA", "billing_details"=>{"address"=>{"city"=>"Pyrmont", "country"=>"AU", "line1"=>"1 Wattle Crescent", "line2"=>"516", "postal_code"=>"2009", "state"=>"NSW"}, "email"=>"theeufj@gmail.com", "name"=>"Joshua Theeuf", "phone"=>"+61 423 934 037"}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644977893, "currency"=>"aud", "customer"=>"cus_L9wz7JqDG1S3YT", "description"=>nil, "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>59, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTd5TA9176QOxLn1fjAkKbu", "payment_method"=>"pm_1KTd5sA9176QOxLn26JbQg2T", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>"pass", "address_postal_code_check"=>"pass", "cvc_check"=>nil}, "country"=>"US", "exp_month"=>5, "exp_year"=>2026, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"2446", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>{"dynamic_last4"=>"4242", "google_pay"=>{}, "type"=>"google_pay"}}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTd5TA9176QOxLn19WYoe9r/rcpt_L9wzzKRc5iYCKQfeHyMd5yLtxTSBzqb", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTd5TA9176QOxLn19WYoe9r/refunds"}, "review"=>nil, "shipping"=>nil, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}], "has_more"=>false, "total_count"=>1, "url"=>"/v1/charges?payment_intent=pi_3KTd5TA9176QOxLn1fjAkKbu"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644977867, "currency"=>"aud", "customer"=>"cus_L9wz7JqDG1S3YT", "description"=>nil, "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>"pm_1KTd5sA9176QOxLn26JbQg2T", "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>nil, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>"req_9TDqIehSd2aRKf", "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.succeeded", "index"=>{"id"=>"evt_3KTd5TA9176QOxLn19tgt8CO"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 8499)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 13:18:15 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTd5TA9176QOxLn1FMPgWKO", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644977894, "data"=>{"object"=>{"id"=>"ch_3KTd5TA9176QOxLn19WYoe9r", "object"=>"charge", "amount"=>3000, "amount_captured"=>3000, "amount_refunded"=>0, "application"=>nil, "application_fee"=>nil, "application_fee_amount"=>nil, "balance_transaction"=>"txn_3KTd5TA9176QOxLn1p7giYkA", "billing_details"=>{"address"=>{"city"=>"Pyrmont", "country"=>"AU", "line1"=>"1 Wattle Crescent", "line2"=>"516", "postal_code"=>"2009", "state"=>"NSW"}, "email"=>"theeufj@gmail.com", "name"=>"Joshua Theeuf", "phone"=>"+61 423 934 037"}, "calculated_statement_descriptor"=>"Stripe", "captured"=>true, "created"=>1644977893, "currency"=>"aud", "customer"=>"cus_L9wz7JqDG1S3YT", "description"=>nil, "destination"=>nil, "dispute"=>nil, "disputed"=>false, "failure_code"=>nil, "failure_message"=>nil, "fraud_details"=>{}, "invoice"=>nil, "livemode"=>false, "metadata"=>{}, "on_behalf_of"=>nil, "order"=>nil, "outcome"=>{"network_status"=>"approved_by_network", "reason"=>nil, "risk_level"=>"normal", "risk_score"=>59, "seller_message"=>"Payment complete.", "type"=>"authorized"}, "paid"=>true, "payment_intent"=>"pi_3KTd5TA9176QOxLn1fjAkKbu", "payment_method"=>"pm_1KTd5sA9176QOxLn26JbQg2T", "payment_method_details"=>{"card"=>{"brand"=>"visa", "checks"=>{"address_line1_check"=>"pass", "address_postal_code_check"=>"pass", "cvc_check"=>nil}, "country"=>"US", "exp_month"=>5, "exp_year"=>2026, "fingerprint"=>"bFvs8ELbydOdOEOx", "funding"=>"credit", "installments"=>nil, "last4"=>"2446", "network"=>"visa", "three_d_secure"=>nil, "wallet"=>{"dynamic_last4"=>"4242", "google_pay"=>{}, "type"=>"google_pay"}}, "type"=>"card"}, "receipt_email"=>nil, "receipt_number"=>nil, "receipt_url"=>"https://pay.stripe.com/receipts/acct_1KSfv1A9176QOxLn/ch_3KTd5TA9176QOxLn19WYoe9r/rcpt_L9wzzKRc5iYCKQfeHyMd5yLtxTSBzqb", "refunded"=>false, "refunds"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges/ch_3KTd5TA9176QOxLn19WYoe9r/refunds"}, "review"=>nil, "shipping"=>nil, "source"=>nil, "source_transfer"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"succeeded", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>3, "request"=>{"id"=>"req_9TDqIehSd2aRKf", "idempotency_key"=>"[FILTERED]"}, "type"=>"charge.succeeded", "index"=>{"id"=>"evt_3KTd5TA9176QOxLn1FMPgWKO"}}
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."email" = $1 LIMIT $2[0m  [["email", "theeufj@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/indices_controller.rb:57:in `webhook'
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 4ms (ActiveRecord: 0.4ms | Allocations: 6505)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 13:18:15 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_1KTd5vA9176QOxLngY70wsHg", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644977895, "data"=>{"object"=>{"id"=>"cs_test_a1kn8kuhCUn0Ep7WehuPD4vMjtcYQAf2EczJioV3KCnPxTlA2kPx9cBVe8", "object"=>"checkout.session", "after_expiration"=>nil, "allow_promotion_codes"=>false, "amount_subtotal"=>3000, "amount_total"=>3000, "automatic_tax"=>{"enabled"=>false, "status"=>nil}, "billing_address_collection"=>"auto", "cancel_url"=>"https://stripe.com", "client_reference_id"=>nil, "consent"=>nil, "consent_collection"=>nil, "currency"=>"aud", "customer"=>"cus_L9wz7JqDG1S3YT", "customer_creation"=>"always", "customer_details"=>{"email"=>"theeufj@gmail.com", "phone"=>"+61423934037", "tax_exempt"=>"none", "tax_ids"=>[]}, "customer_email"=>nil, "expires_at"=>1645064267, "livemode"=>false, "locale"=>"auto", "metadata"=>{}, "mode"=>"payment", "payment_intent"=>"pi_3KTd5TA9176QOxLn1fjAkKbu", "payment_link"=>"plink_1KSfxlA9176QOxLnrzdtaN0r", "payment_method_options"=>{}, "payment_method_types"=>["card"], "payment_status"=>"paid", "phone_number_collection"=>{"enabled"=>true}, "recovered_from"=>nil, "setup_intent"=>nil, "shipping"=>nil, "shipping_address_collection"=>nil, "shipping_options"=>[], "shipping_rate"=>nil, "status"=>"complete", "submit_type"=>nil, "subscription"=>nil, "success_url"=>"https://stripe.com", "total_details"=>{"amount_discount"=>0, "amount_shipping"=>0, "amount_tax"=>0}, "url"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>nil, "idempotency_key"=>"[FILTERED]"}, "type"=>"checkout.session.completed", "index"=>{"id"=>"evt_1KTd5vA9176QOxLngY70wsHg"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 3620)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 13:23:01 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTdAWA9176QOxLn1CFN4zup", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644978180, "data"=>{"object"=>{"id"=>"pi_3KTdAWA9176QOxLn1tjiwVKl", "object"=>"payment_intent", "amount"=>3000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTdAWA9176QOxLn1tjiwVKl"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644978180, "currency"=>"aud", "customer"=>nil, "description"=>nil, "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>nil, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>nil, "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTdAWA9176QOxLn1CFN4zup"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 3222)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 13:23:02 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTdAXA9176QOxLn1aqcGA19", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644978181, "data"=>{"object"=>{"id"=>"pi_3KTdAXA9176QOxLn1BZr94hX", "object"=>"payment_intent", "amount"=>3000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTdAXA9176QOxLn1BZr94hX"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644978181, "currency"=>"aud", "customer"=>nil, "description"=>nil, "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>nil, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>nil, "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTdAXA9176QOxLn1aqcGA19"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 3222)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageTables (20220216030900)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (21.6ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "service_name" character varying NOT NULL, "byte_size" bigint NOT NULL, "checksum" character varying, "created_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (22.8ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" bigserial primary key, "blob_id" bigint NOT NULL, "variation_digest" character varying NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220216030900"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-02-16 15:20:44 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/josh/Documents/Workspace/linkdNFT/app/controllers/indices_controller.rb:77: syntax error, unexpected local variable or method, expecting =>
+...ked_in_profile], :images params[:images])
+...                         ^~~~~~
+/Users/josh/Documents/Workspace/linkdNFT/app/controllers/indices_controller.rb:77: syntax error, unexpected ')', expecting `end'
+...file], :images params[:images])
+...                              ^
+):
+  
+app/controllers/indices_controller.rb:77: syntax error, unexpected local variable or method, expecting =>
+app/controllers/indices_controller.rb:77: syntax error, unexpected ')', expecting `end'
+app/controllers/indices_controller.rb:77: syntax error, unexpected local variable or method, expecting =>
+app/controllers/indices_controller.rb:77: syntax error, unexpected ')', expecting `end'
+app/controllers/indices_controller.rb:77: syntax error, unexpected local variable or method, expecting =>
+app/controllers/indices_controller.rb:77: syntax error, unexpected ')', expecting `end'
+Started GET "/" for ::1 at 2022-02-16 15:21:12 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 50.9ms | Allocations: 44131)
+  Rendered layout layouts/application.html.erb (Duration: 96.8ms | Allocations: 69476)
+Completed 200 OK in 105ms (Views: 98.4ms | ActiveRecord: 0.0ms | Allocations: 74151)
+
+
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 15:21:12 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 15:21:12 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started POST "/customer_create" for ::1 at 2022-02-16 15:21:30 +1100
+Processing by IndicesController#create_customer as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>"", "images"=>"unnamed.jpeg"}
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 13.1ms | Allocations: 21841)
+
+
+  
+ActiveSupport::MessageVerifier::InvalidSignature (ActiveSupport::MessageVerifier::InvalidSignature):
+  
+app/controllers/indices_controller.rb:77:in `create_customer'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddImageToCustomer (20220216042220)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.9ms)[0m  [1m[35mALTER TABLE "customers" ADD "image" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220216042220"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/customer_create" for ::1 at 2022-02-16 15:22:47 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#create_customer as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>"", "images"=>"unnamed.jpeg"}
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 17.5ms | Allocations: 22711)
+
+
+  
+ActiveSupport::MessageVerifier::InvalidSignature (ActiveSupport::MessageVerifier::InvalidSignature):
+  
+app/controllers/indices_controller.rb:77:in `create_customer'
+Started POST "/customer_create" for ::1 at 2022-02-16 15:23:38 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#create_customer as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>"", "images"=>"unnamed.jpeg"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+  [1m[36mCustomer Create (1.0ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "email", "linked_in_profile", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", ""], ["email", ""], ["linked_in_profile", ""], ["created_at", "2022-02-16 04:23:38.718216"], ["updated_at", "2022-02-16 04:23:38.718216"], ["image", "unnamed.jpeg"]]
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+Redirected to https://buy.stripe.com/test_cN29E66KDbWM3ugdQQ
+Completed 302 Found in 31ms (ActiveRecord: 21.9ms | Allocations: 14850)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 15:23:40 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTf3KA9176QOxLn1J6QPbuI", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644985422, "data"=>{"object"=>{"id"=>"pi_3KTf3KA9176QOxLn1sChFRzx", "object"=>"payment_intent", "amount"=>3000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTf3KA9176QOxLn1sChFRzx"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644985422, "currency"=>"aud", "customer"=>nil, "description"=>nil, "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>nil, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>nil, "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTf3KA9176QOxLn1J6QPbuI"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 6ms (ActiveRecord: 2.7ms | Allocations: 4488)
+
+
+Started GET "/" for ::1 at 2022-02-16 15:23:56 +1100
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 59.5ms | Allocations: 44326)
+  Rendered layout layouts/application.html.erb (Duration: 82.5ms | Allocations: 69779)
+Completed 200 OK in 93ms (Views: 87.8ms | ActiveRecord: 0.0ms | Allocations: 72841)
+
+
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-16 15:23:56 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-16 15:23:56 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started POST "/customer_create" for ::1 at 2022-02-16 15:24:04 +1100
+Processing by IndicesController#create_customer as HTML
+  Parameters: {"First_Name"=>"", "linked_in_profile"=>"", "Email_Address"=>"", "images"=>"6790097D-04D2-486E-A5E8-60AFFE2E3519.jpeg"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+  [1m[36mCustomer Create (0.6ms)[0m  [1m[32mINSERT INTO "customers" ("first_name", "email", "linked_in_profile", "created_at", "updated_at", "image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", ""], ["email", ""], ["linked_in_profile", ""], ["created_at", "2022-02-16 04:24:04.252963"], ["updated_at", "2022-02-16 04:24:04.252963"], ["image", "6790097D-04D2-486E-A5E8-60AFFE2E3519.jpeg"]]
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/indices_controller.rb:78:in `create_customer'
+Redirected to https://buy.stripe.com/test_cN29E66KDbWM3ugdQQ
+Completed 302 Found in 8ms (ActiveRecord: 1.5ms | Allocations: 2142)
+
+
+Started POST "/webhook" for ::1 at 2022-02-16 15:24:06 +1100
+Processing by IndicesController#webhook as XML
+  Parameters: {"id"=>"evt_3KTf3jA9176QOxLn1GhoZHmE", "object"=>"event", "api_version"=>"2020-08-27", "created"=>1644985447, "data"=>{"object"=>{"id"=>"pi_3KTf3jA9176QOxLn1OVi8pGO", "object"=>"payment_intent", "amount"=>3000, "amount_capturable"=>0, "amount_received"=>0, "application"=>nil, "application_fee_amount"=>nil, "automatic_payment_methods"=>nil, "canceled_at"=>nil, "cancellation_reason"=>nil, "capture_method"=>"automatic", "charges"=>{"object"=>"list", "data"=>[], "has_more"=>false, "total_count"=>0, "url"=>"/v1/charges?payment_intent=pi_3KTf3jA9176QOxLn1OVi8pGO"}, "client_secret"=>"[FILTERED]", "confirmation_method"=>"automatic", "created"=>1644985447, "currency"=>"aud", "customer"=>nil, "description"=>nil, "invoice"=>nil, "last_payment_error"=>nil, "livemode"=>false, "metadata"=>{}, "next_action"=>nil, "on_behalf_of"=>nil, "payment_method"=>nil, "payment_method_options"=>{"card"=>{"installments"=>nil, "network"=>nil, "request_three_d_secure"=>"automatic"}}, "payment_method_types"=>["card"], "processing"=>nil, "receipt_email"=>nil, "review"=>nil, "setup_future_usage"=>nil, "shipping"=>nil, "source"=>nil, "statement_descriptor"=>nil, "statement_descriptor_suffix"=>nil, "status"=>"requires_payment_method", "transfer_data"=>nil, "transfer_group"=>nil}}, "livemode"=>false, "pending_webhooks"=>2, "request"=>{"id"=>nil, "idempotency_key"=>"[FILTERED]"}, "type"=>"payment_intent.created", "index"=>{"id"=>"evt_3KTf3jA9176QOxLn1GhoZHmE"}}
+No template found for IndicesController#webhook, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 3275)
+
+
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
