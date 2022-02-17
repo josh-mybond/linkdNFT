@@ -5,7 +5,7 @@ class IndicesController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [ :webhook, :create_customer ]
 
   def webhook
-    endpoint_secret = 'whsec_3dcacc6015399a286feeac1a990329553c40b1633214608063f19cb07e0e2cb6';
+    endpoint_secret = 'whsec_Y98HMTMiOdOitxwzIe82fVZJOyWbxBRs';
     payload = request.body.read
     event = nil
 
@@ -83,7 +83,7 @@ class IndicesController < ApplicationController
   def show
     # Set your secret key. Remember to switch to your live secret key in production.
     # See your keys here: https://dashboard.stripe.com/apikeys
-  Stripe.api_key = 'sk_test_51KSfv1A9176QOxLnwHZ9thq94OpjF3snKEHf8PQgNvkadyrfPP83fKsPyIRZw2AB0CI1YqbvRF9fMSthNl5PuC5R00ztJez2WW'
+  Stripe.api_key = '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'
 
   Stripe::Customer.create(description: 'My First Test Customer', first_name: "josh", last_name: "bond")
   end
