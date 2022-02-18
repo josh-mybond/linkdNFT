@@ -1,0 +1,10 @@
+<h1>Editing nft</h1>
+
+<%= render "form", nft: @nft %>
+
+<br>
+
+<div>
+  <%= link_to "Show this nft", @nft[:nft_id] %> |
+  <%= link_to "Back to nfts", nfts_path %>
+</div>

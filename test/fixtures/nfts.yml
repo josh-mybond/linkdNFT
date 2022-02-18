@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  token_link: MyString
+  owner_name: MyString
+  wallet_address: MyString
+  nft_id: MyString
+
+two:
+  token_link: MyString
+  owner_name: MyString
+  wallet_address: MyString
+  nft_id: MyString

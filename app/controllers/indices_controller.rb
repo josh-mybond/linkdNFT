@@ -76,7 +76,7 @@ class IndicesController < ApplicationController
   def create_customer
     @customer = Customer.new(first_name: params[:First_Name], email: params[:Email_Address], linked_in_profile: params[:linked_in_profile], image: params[:images])
     @customer.save
-    redirect_to "https://buy.stripe.com/test_cN29E66KDbWM3ugdQQ", allow_other_host: true
+    redirect_to "https://buy.stripe.com/eVa5lf4CB5HKfNC4gg", allow_other_host: true
   end
 
   # GET /indices/1 or /indices/1.json

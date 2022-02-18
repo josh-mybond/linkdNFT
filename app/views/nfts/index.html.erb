@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Nfts</h1>
+
+<div id="nfts">
+  <% @nfts.each do |nft| %>
+    <%= render nft %>
+    <p>
+      <%= link_to "Show this nft", my_nft_path_url(nft.nft_id) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New nft", new_nft_path %>

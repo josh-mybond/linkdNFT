@@ -3774,3 +3774,1994 @@ Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 3275)
   [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNfts (20220217221907)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNfts (20220217221907)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNfts (20220217222016)
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (16.5ms)[0m  [1m[35mCREATE TABLE "nfts" ("id" bigserial primary key, "token_link" character varying, "nft_id" character varying, "owner_name" character varying, "wallet_address" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (4.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220217222016"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-02-18 09:23:44 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering indices/index.html.erb within layouts/application
+  Rendered indices/index.html.erb within layouts/application (Duration: 60.6ms | Allocations: 44454)
+  Rendered layout layouts/application.html.erb (Duration: 81.2ms | Allocations: 69805)
+Completed 200 OK in 87ms (Views: 82.8ms | ActiveRecord: 0.0ms | Allocations: 76500)
+
+
+Started GET "/fonts/socicon.ttf?a93r5t" for ::1 at 2022-02-18 09:23:45 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.ttf"):
+  
+Started GET "/fonts/socicon.woff?a93r5t" for ::1 at 2022-02-18 09:23:45 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/socicon.woff"):
+  
+Started GET "/nft" for ::1 at 2022-02-18 09:23:48 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/nft"):
+  
+Started GET "/new_nft_path" for ::1 at 2022-02-18 09:23:54 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/new_nft_path"):
+  
+Started GET "/new_nft" for ::1 at 2022-02-18 09:23:57 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/new_nft"):
+  
+Started GET "/nfts" for ::1 at 2022-02-18 09:24:04 +1100
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (4.4ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1428)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 11707)
+Completed 200 OK in 30ms (Views: 20.7ms | ActiveRecord: 4.4ms | Allocations: 13295)
+
+
+Started GET "/nfts/new" for ::1 at 2022-02-18 09:24:06 +1100
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 17.8ms | Allocations: 5240)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 19.5ms | Allocations: 5608)
+  Rendered layout layouts/application.html.erb (Duration: 28.8ms | Allocations: 15784)
+Completed 200 OK in 69ms (Views: 29.4ms | ActiveRecord: 16.8ms | Allocations: 21849)
+
+
+Started POST "/nfts" for ::1 at 2022-02-18 09:24:24 +1100
+Processing by NftsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nft"=>{"token_link"=>"[FILTERED]", "nft_id"=>"shjdh", "owner_name"=>"sdhjsd", "wallet_address"=>"s"}, "commit"=>"Create Nft"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/nfts_controller.rb:32:in `block in create'
+  [1m[36mNft Create (3.6ms)[0m  [1m[32mINSERT INTO "nfts" ("token_link", "nft_id", "owner_name", "wallet_address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["token_link", "[FILTERED]"], ["nft_id", "9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q"], ["owner_name", "sdhjsd"], ["wallet_address", "s"], ["created_at", "2022-02-17 22:24:38.074674"], ["updated_at", "2022-02-17 22:24:38.074674"]]
+  ↳ app/controllers/nfts_controller.rb:32:in `block in create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/nfts_controller.rb:32:in `block in create'
+Redirected to http://localhost:3000/nfts/1
+Completed 302 Found in 13939ms (ActiveRecord: 20.1ms | Allocations: 116864)
+
+
+Started GET "/nfts/1" for ::1 at 2022-02-18 09:24:38 +1100
+Processing by NftsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+Completed 404 Not Found in 3ms (ActiveRecord: 0.0ms | Allocations: 1135)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Nft without an ID):
+  
+app/controllers/nfts_controller.rb:68:in `set_nft'
+Started GET "/nfts/new" for ::1 at 2022-02-18 09:24:38 +1100
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 1.1ms | Allocations: 1505)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1621)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 26546)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 27439)
+
+
+Started GET "/nfts" for ::1 at 2022-02-18 09:29:39 +1100
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (0.5ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/_nft.html.erb (Duration: 1.7ms | Allocations: 319)
+  Rendered nfts/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 5699)
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 15780)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.5ms | Allocations: 16164)
+
+
+Started GET "/nft/9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q" for ::1 at 2022-02-18 09:29:49 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/nft/9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q"):
+  
+Started GET "/nfts/9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q" for ::1 at 2022-02-18 09:29:56 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 524)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Nft without an ID):
+  
+app/controllers/nfts_controller.rb:68:in `set_nft'
+Started PUT "/__web_console/repl_sessions/c944e3ea24d8de238274017ffb00c6c9" for ::1 at 2022-02-18 09:30:06 +1100
+Started PUT "/__web_console/repl_sessions/c944e3ea24d8de238274017ffb00c6c9" for ::1 at 2022-02-18 09:30:07 +1100
+Started PUT "/__web_console/repl_sessions/c944e3ea24d8de238274017ffb00c6c9" for ::1 at 2022-02-18 09:30:25 +1100
+Started PUT "/__web_console/repl_sessions/c944e3ea24d8de238274017ffb00c6c9" for ::1 at 2022-02-18 09:30:34 +1100
+  [1m[36mNft Load (1.0ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:68:in `set_nft'
+Started PUT "/__web_console/repl_sessions/c944e3ea24d8de238274017ffb00c6c9" for ::1 at 2022-02-18 09:30:44 +1100
+  [1m[36mNft Load (0.6ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q"], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:68:in `set_nft'
+Started GET "/nfts/9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q" for ::1 at 2022-02-18 09:31:37 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q"}
+Completed 404 Not Found in 14ms (ActiveRecord: 10.9ms | Allocations: 1504)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Nft without an ID):
+  
+app/controllers/nfts_controller.rb:68:in `set_nft'
+Started GET "/nfts/9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q" for ::1 at 2022-02-18 09:31:49 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q"}
+Completed 404 Not Found in 16ms (ActiveRecord: 14.4ms | Allocations: 1535)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Nft without an ID):
+  
+app/controllers/nfts_controller.rb:68:in `set_nft'
+Started GET "/nfts/9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q" for ::1 at 2022-02-18 09:31:50 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 508)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Nft without an ID):
+  
+app/controllers/nfts_controller.rb:68:in `set_nft'
+Started GET "/nfts/9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q" for ::1 at 2022-02-18 09:31:58 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q"}
+Completed 404 Not Found in 13ms (ActiveRecord: 10.6ms | Allocations: 1539)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Nft without an ID):
+  
+app/controllers/nfts_controller.rb:68:in `set_nft'
+Started GET "/nfts/9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q" for ::1 at 2022-02-18 09:32:03 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q"}
+Completed 404 Not Found in 15ms (ActiveRecord: 13.0ms | Allocations: 1535)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Nft without an ID):
+  
+app/controllers/nfts_controller.rb:68:in `set_nft'
+Started GET "/nfts/9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q" for ::1 at 2022-02-18 09:32:59 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q"}
+Completed 404 Not Found in 16ms (ActiveRecord: 10.8ms | Allocations: 4685)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Nft without an ID):
+  
+app/controllers/nfts_controller.rb:68:in `set_nft'
+Started GET "/nfts/9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q" for ::1 at 2022-02-18 09:33:00 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 544)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Nft without an ID):
+  
+app/controllers/nfts_controller.rb:68:in `set_nft'
+Started GET "/nfts/9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q" for ::1 at 2022-02-18 09:33:01 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q"}
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms | Allocations: 512)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Nft without an ID):
+  
+app/controllers/nfts_controller.rb:68:in `set_nft'
+Started GET "/nfts/9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q" for ::1 at 2022-02-18 09:33:23 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q"}
+Completed 404 Not Found in 14010ms (ActiveRecord: 15.6ms | Allocations: 107992)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Nft without an ID):
+  
+app/controllers/nfts_controller.rb:69:in `set_nft'
+Started GET "/nfts/9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q" for ::1 at 2022-02-18 09:34:18 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q"}
+  [1m[36mNft Load (1.0ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:68:in `set_nft'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1604)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1701)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 5.1ms | Allocations: 5899)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <%= render @nft %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this nft", edit_nft_path(@nft) %> |
+  
+app/views/nfts/show.html.erb:3
+Started GET "/nfts/1" for ::1 at 2022-02-18 09:34:59 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNft Load (0.3ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:68:in `set_nft'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1207)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1289)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms | Allocations: 2359)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <%= render @nft %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this nft", edit_nft_path(@nft) %> |
+  
+app/views/nfts/show.html.erb:3
+Started PUT "/__web_console/repl_sessions/732540aac82823c617eeb350f5534326" for ::1 at 2022-02-18 09:35:07 +1100
+Started PUT "/__web_console/repl_sessions/732540aac82823c617eeb350f5534326" for ::1 at 2022-02-18 09:35:07 +1100
+Started PUT "/__web_console/repl_sessions/732540aac82823c617eeb350f5534326" for ::1 at 2022-02-18 09:35:08 +1100
+Started PUT "/__web_console/repl_sessions/732540aac82823c617eeb350f5534326" for ::1 at 2022-02-18 09:35:09 +1100
+Started PUT "/__web_console/repl_sessions/732540aac82823c617eeb350f5534326" for ::1 at 2022-02-18 09:35:10 +1100
+Started PUT "/__web_console/repl_sessions/732540aac82823c617eeb350f5534326" for ::1 at 2022-02-18 09:35:10 +1100
+  [1m[36mNft Load (0.7ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/732540aac82823c617eeb350f5534326" for ::1 at 2022-02-18 09:35:16 +1100
+Started PUT "/__web_console/repl_sessions/732540aac82823c617eeb350f5534326" for ::1 at 2022-02-18 09:35:17 +1100
+Started PUT "/__web_console/repl_sessions/732540aac82823c617eeb350f5534326" for ::1 at 2022-02-18 09:35:35 +1100
+  [1m[36mNft Load (0.8ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q"], ["LIMIT", 1]]
+  ↳ app/views/nfts/show.html.erb:3
+Started GET "/nfts/1" for ::1 at 2022-02-18 09:35:44 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNft Load (0.3ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:68:in `set_nft'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1200)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1288)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 3.9ms | Allocations: 4249)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <%= render @nft %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this nft", edit_nft_path(@nft) %> |
+  
+app/views/nfts/show.html.erb:3
+Started PUT "/__web_console/repl_sessions/6fc58f951f19a46ab3cd426c204a3c82" for ::1 at 2022-02-18 09:35:54 +1100
+Started PUT "/__web_console/repl_sessions/6fc58f951f19a46ab3cd426c204a3c82" for ::1 at 2022-02-18 09:35:55 +1100
+Started PUT "/__web_console/repl_sessions/6fc58f951f19a46ab3cd426c204a3c82" for ::1 at 2022-02-18 09:35:56 +1100
+Started GET "/nfts/1" for ::1 at 2022-02-18 09:36:18 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNft Load (0.4ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ (rdbg)//Users/josh/Documents/Workspace/linkdNFT/app/controllers/nfts_controller.rb:1:in `set_nft'
+  [1m[36mNft Load (0.6ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "1"], ["LIMIT", 1]]
+  ↳ (rdbg)//Users/josh/Documents/Workspace/linkdNFT/app/controllers/nfts_controller.rb:1:in `set_nft'
+  [1m[36mCACHE Nft Load (0.1ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:68:in `set_nft'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1163)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1256)
+Completed 500 Internal Server Error in 32782ms (ActiveRecord: 4.5ms | Allocations: 95483)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <%= render @nft %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this nft", edit_nft_path(@nft) %> |
+  
+app/views/nfts/show.html.erb:3
+Started PUT "/__web_console/repl_sessions/6fc58f951f19a46ab3cd426c204a3c82" for ::1 at 2022-02-18 09:36:51 +1100
+Started PUT "/__web_console/repl_sessions/6fc58f951f19a46ab3cd426c204a3c82" for ::1 at 2022-02-18 09:36:51 +1100
+Started PUT "/__web_console/repl_sessions/6fc58f951f19a46ab3cd426c204a3c82" for ::1 at 2022-02-18 09:36:51 +1100
+Started GET "/nfts/9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q" for ::1 at 2022-02-18 09:36:51 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q"}
+  [1m[36mNft Load (1.3ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q"], ["LIMIT", 1]]
+  ↳ app/views/nfts/show.html.erb:3
+  [1m[36mNft Load (1.9ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q"], ["LIMIT", 1]]
+  ↳ app/views/nfts/show.html.erb:3
+  [1m[36mNft Load (0.6ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:68:in `set_nft'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 1083)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | Allocations: 1165)
+Completed 500 Internal Server Error in 10415ms (ActiveRecord: 14.0ms | Allocations: 111871)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <%= render @nft %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this nft", edit_nft_path(@nft) %> |
+  
+app/views/nfts/show.html.erb:3
+Started GET "/nfts/9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q" for ::1 at 2022-02-18 09:37:06 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q"}
+  [1m[36mNft Load (1.1ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "9-xrv9GHtkv6LImptiA9BJP-aUI0gfepjvNuiKLU_6Q"], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:68:in `set_nft'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/_nft.html.erb (Duration: 0.7ms | Allocations: 323)
+  Rendered nfts/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1266)
+  Rendered layout layouts/application.html.erb (Duration: 76.0ms | Allocations: 66123)
+Completed 200 OK in 130ms (Views: 77.4ms | ActiveRecord: 22.1ms | Allocations: 138814)
+
+
+Started DELETE "/nfts/1" for ::1 at 2022-02-18 09:37:28 +1100
+Processing by NftsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mNft Load (0.7ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:68:in `set_nft'
+Completed 500 Internal Server Error in 6197ms (ActiveRecord: 0.7ms | Allocations: 56698)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/nfts_controller.rb:56:in `destroy'
+Started GET "/nfts" for ::1 at 2022-02-18 09:37:51 +1100
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (0.6ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/_nft.html.erb (Duration: 0.2ms | Allocations: 32)
+  Rendered nfts/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1260)
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 11409)
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.6ms | Allocations: 11862)
+
+
+Started GET "/nfts" for ::1 at 2022-02-18 09:38:17 +1100
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (0.3ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 55)
+  Rendered nfts/index.html.erb within layouts/application (Duration: 14.5ms | Allocations: 3162)
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 28027)
+Completed 200 OK in 29ms (Views: 15.2ms | ActiveRecord: 11.7ms | Allocations: 29722)
+
+
+Started GET "/nfts/1" for ::1 at 2022-02-18 09:38:19 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNft Load (0.3ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:68:in `set_nft'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1153)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 1235)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms | Allocations: 2265)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <%= render @nft %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this nft", edit_nft_path(@nft) %> |
+  
+app/views/nfts/show.html.erb:3
+Started GET "/nfts/1" for ::1 at 2022-02-18 09:39:42 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNft Load (0.5ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:68:in `set_nft'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1474)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1562)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.5ms | Allocations: 3217)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <%= render @nft %>
+    4: 
+    5: <div>
+    6:   <% @nft = Nft.find_by(nft_id: @nft.nft_id)%>
+  
+app/views/nfts/show.html.erb:3
+Started GET "/nfts" for ::1 at 2022-02-18 09:39:45 +1100
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (0.5ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/_nft.html.erb (Duration: 2.4ms | Allocations: 262)
+  Rendered nfts/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1599)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 12219)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.5ms | Allocations: 12668)
+
+
+Started GET "/nfts/1" for ::1 at 2022-02-18 09:39:47 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNft Load (0.5ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:68:in `set_nft'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1167)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1249)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms | Allocations: 2080)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <%= render @nft %>
+    4: 
+    5: <div>
+    6:   <% @nft = Nft.find_by(nft_id: @nft.nft_id)%>
+  
+app/views/nfts/show.html.erb:3
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNfts (20220217222016)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.2ms)[0m  [1m[35mDROP TABLE "nfts"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20220217222016"]]
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNfts (20220217224042)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNfts (20220217224042)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNfts (20220217224042)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "nfts" ("token_link" character varying, "nft_id" character varying, "owner_name" character varying, "wallet_address" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220217224042"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/nfts/" for ::1 at 2022-02-18 09:44:28 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (1.1ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1908)
+  Rendered layout layouts/application.html.erb (Duration: 47.1ms | Allocations: 67428)
+Completed 200 OK in 57ms (Views: 51.2ms | ActiveRecord: 1.1ms | Allocations: 74137)
+
+
+Started GET "/nfts/new" for ::1 at 2022-02-18 09:44:29 +1100
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 10.4ms | Allocations: 3870)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 11.9ms | Allocations: 4248)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 14342)
+Completed 200 OK in 114ms (Views: 31.1ms | ActiveRecord: 62.0ms | Allocations: 20025)
+
+
+Started GET "/nfts/new" for ::1 at 2022-02-18 09:44:44 +1100
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 56121.7ms | Allocations: 108444)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 56125.7ms | Allocations: 109198)
+  Rendered layout layouts/application.html.erb (Duration: 56138.9ms | Allocations: 120006)
+Completed 200 OK in 56144ms (Views: 56142.2ms | ActiveRecord: 0.0ms | Allocations: 121246)
+
+
+Started GET "/nfts/new" for ::1 at 2022-02-18 09:45:41 +1100
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 1.4ms | Allocations: 1715)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 2071)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 27234)
+Completed 200 OK in 26ms (Views: 14.1ms | ActiveRecord: 8.6ms | Allocations: 30935)
+
+
+Started POST "/nfts" for ::1 at 2022-02-18 09:45:47 +1100
+Processing by NftsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nft"=>{"token_link"=>"[FILTERED]", "owner_name"=>"sd", "wallet_address"=>"sds"}, "commit"=>"Create Nft"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 3597)
+
+
+  
+NameError (undefined local variable or method `token' for #<NftsController:0x000000000109a0>):
+  
+app/controllers/nfts_controller.rb:30:in `create'
+Started GET "/nfts/new" for ::1 at 2022-02-18 09:46:02 +1100
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 1.4ms | Allocations: 1310)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1426)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 26325)
+Completed 200 OK in 28ms (Views: 17.3ms | ActiveRecord: 7.2ms | Allocations: 29632)
+
+
+Started POST "/nfts" for ::1 at 2022-02-18 09:46:10 +1100
+Processing by NftsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nft"=>{"token_link"=>"[FILTERED]", "owner_name"=>"sd", "wallet_address"=>"s"}, "commit"=>"Create Nft"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/nfts_controller.rb:33:in `block in create'
+  [1m[36mNft Create (1.0ms)[0m  [1m[32mINSERT INTO "nfts" ("token_link", "nft_id", "owner_name", "wallet_address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6)[0m  [["token_link", "[FILTERED]"], ["nft_id", "C0PxAcC8b_ZJuQfzRtJr8TzAx-wH8S8cdvPHMmgXe9w"], ["owner_name", "sd"], ["wallet_address", "s"], ["created_at", "2022-02-17 22:46:10.966976"], ["updated_at", "2022-02-17 22:46:10.966976"]]
+  ↳ app/controllers/nfts_controller.rb:33:in `block in create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/nfts_controller.rb:33:in `block in create'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.2ms | Allocations: 3928)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"nfts", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/nfts_controller.rb:34:in `block (2 levels) in create'
+app/controllers/nfts_controller.rb:32:in `create'
+Started GET "/nfts/new" for ::1 at 2022-02-18 09:46:36 +1100
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 1.4ms | Allocations: 1334)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1450)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 26349)
+Completed 200 OK in 23ms (Views: 14.8ms | ActiveRecord: 5.3ms | Allocations: 29694)
+
+
+Started POST "/nfts" for ::1 at 2022-02-18 09:46:41 +1100
+Processing by NftsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nft"=>{"token_link"=>"[FILTERED]", "owner_name"=>"sd", "wallet_address"=>"s"}, "commit"=>"Create Nft"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/nfts_controller.rb:33:in `block in create'
+  [1m[36mNft Create (0.7ms)[0m  [1m[32mINSERT INTO "nfts" ("token_link", "nft_id", "owner_name", "wallet_address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6)[0m  [["token_link", "[FILTERED]"], ["nft_id", "bnN9gCxp-hjG1r3fPx2pZgUJSCvWW56Qa-qIY8PF15I"], ["owner_name", "sd"], ["wallet_address", "s"], ["created_at", "2022-02-17 22:46:41.500401"], ["updated_at", "2022-02-17 22:46:41.500401"]]
+  ↳ app/controllers/nfts_controller.rb:33:in `block in create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/nfts_controller.rb:33:in `block in create'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.5ms | Allocations: 2987)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"nfts", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/nfts_controller.rb:34:in `block (2 levels) in create'
+app/controllers/nfts_controller.rb:32:in `create'
+Started GET "/nfts/new" for ::1 at 2022-02-18 09:47:08 +1100
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 1.3ms | Allocations: 1307)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1423)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 26322)
+Completed 200 OK in 26ms (Views: 16.5ms | ActiveRecord: 5.8ms | Allocations: 29694)
+
+
+Started POST "/nfts" for ::1 at 2022-02-18 09:47:12 +1100
+Processing by NftsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nft"=>{"token_link"=>"[FILTERED]", "owner_name"=>"sd", "wallet_address"=>"sd"}, "commit"=>"Create Nft"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/nfts_controller.rb:33:in `block in create'
+  [1m[36mNft Create (0.5ms)[0m  [1m[32mINSERT INTO "nfts" ("token_link", "nft_id", "owner_name", "wallet_address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6)[0m  [["token_link", "[FILTERED]"], ["nft_id", "EpuT2jwk9--xlJuwA5K1Ozak5AN3GHBuxFCG7IG1FVQ"], ["owner_name", "sd"], ["wallet_address", "sd"], ["created_at", "2022-02-17 22:47:12.818991"], ["updated_at", "2022-02-17 22:47:12.818991"]]
+  ↳ app/controllers/nfts_controller.rb:33:in `block in create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/nfts_controller.rb:33:in `block in create'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 1.2ms | Allocations: 2998)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"nfts", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/nfts_controller.rb:34:in `block (2 levels) in create'
+app/controllers/nfts_controller.rb:32:in `create'
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNfts (20220217224042)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.5ms)[0m  [1m[35mDROP TABLE "nfts"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20220217224042"]]
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNfts (20220217224825)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "nfts" ("token_link" character varying, "id" character varying, "owner_name" character varying, "wallet_address" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220217224825"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/nfts/" for ::1 at 2022-02-18 09:49:38 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (1.0ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1907)
+  Rendered layout layouts/application.html.erb (Duration: 60.4ms | Allocations: 66999)
+Completed 200 OK in 72ms (Views: 65.0ms | ActiveRecord: 1.0ms | Allocations: 73696)
+
+
+Started GET "/nfts/" for ::1 at 2022-02-18 09:49:38 +1100
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (0.3ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/index.html.erb within layouts/application (Duration: 35.8ms | Allocations: 940)
+  Rendered layout layouts/application.html.erb (Duration: 42.0ms | Allocations: 11013)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.3ms | Allocations: 11413)
+
+
+Started GET "/nfts/" for ::1 at 2022-02-18 09:49:39 +1100
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (0.4ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 793)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 10812)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.4ms | Allocations: 11162)
+
+
+Started GET "/nfts/new" for ::1 at 2022-02-18 09:49:40 +1100
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 8.6ms | Allocations: 3596)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 3979)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 14088)
+Completed 200 OK in 38ms (Views: 20.7ms | ActiveRecord: 6.7ms | Allocations: 19743)
+
+
+Started POST "/nfts" for ::1 at 2022-02-18 09:49:49 +1100
+Processing by NftsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nft"=>{"token_link"=>"[FILTERED]", "owner_name"=>"sd", "wallet_address"=>"s"}, "commit"=>"Create Nft"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/nfts_controller.rb:30:in `block in create'
+  [1m[36mNft Create (0.9ms)[0m  [1m[32mINSERT INTO "nfts" ("token_link", "id", "owner_name", "wallet_address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6)[0m  [["token_link", "[FILTERED]"], ["id", "SF1sgKkto8WxXH4pOC-a2bs7kqB1GVdEP8x5YWrNMqQ"], ["owner_name", "sd"], ["wallet_address", "s"], ["created_at", "2022-02-17 22:49:49.398556"], ["updated_at", "2022-02-17 22:49:49.398556"]]
+  ↳ app/controllers/nfts_controller.rb:30:in `block in create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/nfts_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/nfts/SF1sgKkto8WxXH4pOC-a2bs7kqB1GVdEP8x5YWrNMqQ
+Completed 302 Found in 10ms (ActiveRecord: 2.5ms | Allocations: 3836)
+
+
+Started GET "/nfts/SF1sgKkto8WxXH4pOC-a2bs7kqB1GVdEP8x5YWrNMqQ" for ::1 at 2022-02-18 09:49:49 +1100
+Processing by NftsController#show as TURBO_STREAM
+  Parameters: {"id"=>"SF1sgKkto8WxXH4pOC-a2bs7kqB1GVdEP8x5YWrNMqQ"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 547)
+
+
+  
+ActiveRecord::UnknownPrimaryKey (Unknown primary key for table nfts in model Nft.):
+  
+app/controllers/nfts_controller.rb:66:in `set_nft'
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNfts (20220217224825)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.8ms)[0m  [1m[35mDROP TABLE "nfts"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20220217224825"]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNfts (20220217225024)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE TABLE "nfts" ("id" bigserial primary key, "token_link" character varying, "owner_name" character varying, "wallet_address" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220217225024"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/nfts/" for ::1 at 2022-02-18 09:50:47 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (15.1ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/index.html.erb within layouts/application (Duration: 31.4ms | Allocations: 1943)
+  Rendered layout layouts/application.html.erb (Duration: 95.9ms | Allocations: 67448)
+Completed 200 OK in 107ms (Views: 86.5ms | ActiveRecord: 15.1ms | Allocations: 74145)
+
+
+Started GET "/nfts/" for ::1 at 2022-02-18 09:50:47 +1100
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (0.5ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 920)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 10993)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.5ms | Allocations: 11393)
+
+
+Started GET "/nfts/" for ::1 at 2022-02-18 09:50:48 +1100
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (0.4ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 808)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 10832)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.4ms | Allocations: 11182)
+
+
+Started GET "/nfts/new" for ::1 at 2022-02-18 09:50:51 +1100
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 11.1ms | Allocations: 3610)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 13.2ms | Allocations: 3993)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 14098)
+Completed 200 OK in 54ms (Views: 24.7ms | ActiveRecord: 16.7ms | Allocations: 19711)
+
+
+Started POST "/nfts" for ::1 at 2022-02-18 09:50:55 +1100
+Processing by NftsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nft"=>{"token_link"=>"[FILTERED]", "owner_name"=>"sd", "wallet_address"=>"sd"}, "commit"=>"Create Nft"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/nfts_controller.rb:30:in `block in create'
+  [1m[36mNft Create (1.0ms)[0m  [1m[32mINSERT INTO "nfts" ("id", "token_link", "owner_name", "wallet_address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 0], ["token_link", "[FILTERED]"], ["owner_name", "sd"], ["wallet_address", "sd"], ["created_at", "2022-02-17 22:50:55.184326"], ["updated_at", "2022-02-17 22:50:55.184326"]]
+  ↳ app/controllers/nfts_controller.rb:30:in `block in create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/nfts_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/nfts/0
+Completed 302 Found in 10ms (ActiveRecord: 2.1ms | Allocations: 3909)
+
+
+Started GET "/nfts/0" for ::1 at 2022-02-18 09:50:55 +1100
+Processing by NftsController#show as TURBO_STREAM
+  Parameters: {"id"=>"0"}
+  [1m[36mNft Load (0.3ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:66:in `set_nft'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/_nft.html.erb (Duration: 0.5ms | Allocations: 283)
+  Rendered nfts/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1593)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 11642)
+Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 0.5ms | Allocations: 14829)
+
+
+Started GET "/nfts/0/edit" for ::1 at 2022-02-18 09:51:00 +1100
+Processing by NftsController#edit as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mNft Load (0.4ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:66:in `set_nft'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/edit.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 2.1ms | Allocations: 1239)
+  Rendered nfts/edit.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1543)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 11486)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.4ms | Allocations: 12499)
+
+
+Started GET "/nfts" for ::1 at 2022-02-18 09:51:02 +1100
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (0.4ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered nfts/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 957)
+  Rendered layout layouts/application.html.erb (Duration: 69.2ms | Allocations: 10955)
+Completed 200 OK in 71ms (Views: 69.5ms | ActiveRecord: 0.4ms | Allocations: 11299)
+
+
+Started GET "/nfts/0" for ::1 at 2022-02-18 09:51:04 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mNft Load (0.6ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:66:in `set_nft'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered nfts/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 510)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 10539)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.6ms | Allocations: 11383)
+
+
+  [1m[36mNft Load (0.9ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" ORDER BY "nfts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/nfts" for ::1 at 2022-02-18 09:51:25 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (1.2ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/_nft.html.erb (Duration: 0.4ms | Allocations: 312)
+  Rendered nfts/index.html.erb within layouts/application (Duration: 29.4ms | Allocations: 7904)
+  Rendered layout layouts/application.html.erb (Duration: 72.8ms | Allocations: 73424)
+Completed 200 OK in 79ms (Views: 55.6ms | ActiveRecord: 18.8ms | Allocations: 80103)
+
+
+Started GET "/nfts/new" for ::1 at 2022-02-18 09:51:26 +1100
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 10.4ms | Allocations: 3572)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 12.3ms | Allocations: 3937)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 14028)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.0ms | Allocations: 14576)
+
+
+Started POST "/nfts" for ::1 at 2022-02-18 09:51:30 +1100
+Processing by NftsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nft"=>{"token_link"=>"[FILTERED]", "owner_name"=>"sdsd", "wallet_address"=>"fdfsd"}, "commit"=>"Create Nft"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/nfts_controller.rb:30:in `block in create'
+  [1m[36mNft Create (1.1ms)[0m  [1m[32mINSERT INTO "nfts" ("id", "token_link", "owner_name", "wallet_address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 8], ["token_link", "[FILTERED]"], ["owner_name", "sdsd"], ["wallet_address", "fdfsd"], ["created_at", "2022-02-17 22:51:30.394172"], ["updated_at", "2022-02-17 22:51:30.394172"]]
+  ↳ app/controllers/nfts_controller.rb:30:in `block in create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/nfts_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/nfts/8
+Completed 302 Found in 12ms (ActiveRecord: 2.1ms | Allocations: 3874)
+
+
+Started GET "/nfts/8" for ::1 at 2022-02-18 09:51:30 +1100
+Processing by NftsController#show as TURBO_STREAM
+  Parameters: {"id"=>"8"}
+  [1m[36mNft Load (0.3ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:66:in `set_nft'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered nfts/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 921)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 11032)
+Completed 200 OK in 17ms (Views: 11.7ms | ActiveRecord: 0.6ms | Allocations: 14175)
+
+
+Started GET "/nfts" for ::1 at 2022-02-18 09:52:01 +1100
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (0.6ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered nfts/_nft.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered nfts/index.html.erb within layouts/application (Duration: 21.4ms | Allocations: 3095)
+  Rendered layout layouts/application.html.erb (Duration: 70.2ms | Allocations: 27981)
+Completed 200 OK in 72ms (Views: 53.2ms | ActiveRecord: 17.6ms | Allocations: 29661)
+
+
+Started GET "/nfts/new" for ::1 at 2022-02-18 09:52:02 +1100
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 3.1ms | Allocations: 1200)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1299)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 11317)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 11704)
+
+
+Started POST "/nfts" for ::1 at 2022-02-18 09:52:06 +1100
+Processing by NftsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nft"=>{"token_link"=>"[FILTERED]", "owner_name"=>"sdsf", "wallet_address"=>"weffds"}, "commit"=>"Create Nft"}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/nfts_controller.rb:31:in `block in create'
+  [1m[36mNft Create (2.9ms)[0m  [1m[32mINSERT INTO "nfts" ("id", "token_link", "owner_name", "wallet_address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 0], ["token_link", "[FILTERED]"], ["owner_name", "sdsf"], ["wallet_address", "weffds"], ["created_at", "2022-02-17 22:52:45.998154"], ["updated_at", "2022-02-17 22:52:45.998154"]]
+  ↳ app/controllers/nfts_controller.rb:31:in `block in create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/nfts_controller.rb:31:in `block in create'
+Completed 500 Internal Server Error in 39906ms (ActiveRecord: 3.8ms | Allocations: 142378)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "nfts_pkey"
+DETAIL:  Key (id)=(0) already exists.
+):
+  
+app/controllers/nfts_controller.rb:31:in `block in create'
+app/controllers/nfts_controller.rb:30:in `create'
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNfts (20220217225024)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.2ms)[0m  [1m[35mDROP TABLE "nfts"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20220217225024"]]
+  [1m[36mTRANSACTION (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNfts (20220217225024)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "nfts" ("id" character varying NOT NULL PRIMARY KEY, "token_link" character varying, "owner_name" character varying, "wallet_address" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220217225024"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/nfts/new" for ::1 at 2022-02-18 09:55:29 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 5.7ms | Allocations: 3869)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 4605)
+  Rendered layout layouts/application.html.erb (Duration: 54.8ms | Allocations: 69882)
+Completed 200 OK in 70ms (Views: 56.6ms | ActiveRecord: 2.9ms | Allocations: 81567)
+
+
+Started POST "/nfts" for ::1 at 2022-02-18 09:55:33 +1100
+Processing by NftsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nft"=>{"token_link"=>"[FILTERED]", "owner_name"=>"fsds", "wallet_address"=>"sdsf"}, "commit"=>"Create Nft"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/nfts_controller.rb:27:in `block in create'
+  [1m[36mNft Create (1.8ms)[0m  [1m[32mINSERT INTO "nfts" ("token_link", "owner_name", "wallet_address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["token_link", "[FILTERED]"], ["owner_name", "fsds"], ["wallet_address", "sdsf"], ["created_at", "2022-02-17 22:55:33.780139"], ["updated_at", "2022-02-17 22:55:33.780139"]]
+  ↳ app/controllers/nfts_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/nfts_controller.rb:27:in `block in create'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.2ms | Allocations: 4479)
+
+
+  
+ActiveRecord::NotNullViolation (PG::NotNullViolation: ERROR:  null value in column "id" of relation "nfts" violates not-null constraint
+DETAIL:  Failing row contains (null, sdsd, fsds, sdsf, 2022-02-17 22:55:33.780139, 2022-02-17 22:55:33.780139).
+):
+  
+app/controllers/nfts_controller.rb:27:in `block in create'
+app/controllers/nfts_controller.rb:26:in `create'
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNfts (20220217225024)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.5ms)[0m  [1m[35mDROP TABLE "nfts"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20220217225024"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNfts (20220217233135)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE TABLE "nfts" ("id" bigserial primary key, "token_link" character varying, "owner_name" character varying, "wallet_address" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220217233135"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/nfts/new" for ::1 at 2022-02-18 10:32:23 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 7.0ms | Allocations: 3875)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 8.9ms | Allocations: 4611)
+  Rendered layout layouts/application.html.erb (Duration: 68.5ms | Allocations: 69680)
+Completed 200 OK in 104ms (Views: 72.5ms | ActiveRecord: 19.4ms | Allocations: 81473)
+
+
+Started POST "/nfts" for ::1 at 2022-02-18 10:34:28 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NftsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nft"=>{"token_link"=>"[FILTERED]", "owner_name"=>"sd", "wallet_address"=>"s"}, "commit"=>"Create Nft"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/nfts_controller.rb:31:in `block in create'
+  [1m[36mNft Create (2.4ms)[0m  [1m[32mINSERT INTO "nfts" ("id", "token_link", "owner_name", "wallet_address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 7], ["token_link", "[FILTERED]"], ["owner_name", "sd"], ["wallet_address", "s"], ["created_at", "2022-02-17 23:34:28.192099"], ["updated_at", "2022-02-17 23:34:28.192099"]]
+  ↳ app/controllers/nfts_controller.rb:31:in `block in create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/nfts_controller.rb:31:in `block in create'
+Redirected to http://localhost:3000/nfts/7
+Completed 302 Found in 31ms (ActiveRecord: 20.4ms | Allocations: 12679)
+
+
+Started GET "/nfts/7" for ::1 at 2022-02-18 10:34:28 +1100
+Processing by NftsController#show as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mNft Load (0.4ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:67:in `set_nft'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/_nft.html.erb (Duration: 0.8ms | Allocations: 311)
+  Rendered nfts/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2054)
+  Rendered layout layouts/application.html.erb (Duration: 79.3ms | Allocations: 67449)
+Completed 200 OK in 16483ms (Views: 84.3ms | ActiveRecord: 0.5ms | Allocations: 186020)
+
+
+Started GET "/nfts" for ::1 at 2022-02-18 10:35:23 +1100
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (0.6ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered nfts/index.html.erb within layouts/application (Duration: 22.7ms | Allocations: 3239)
+  Rendered layout layouts/application.html.erb (Duration: 36.3ms | Allocations: 28020)
+Completed 200 OK in 39ms (Views: 18.3ms | ActiveRecord: 19.0ms | Allocations: 29801)
+
+
+Started GET "/nfts/new" for ::1 at 2022-02-18 10:35:25 +1100
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 9.9ms | Allocations: 3538)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 11.3ms | Allocations: 3878)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 13940)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.0ms | Allocations: 14429)
+
+
+Started POST "/nfts" for ::1 at 2022-02-18 10:35:26 +1100
+Processing by NftsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nft"=>{"token_link"=>"[FILTERED]", "owner_name"=>"", "wallet_address"=>""}, "commit"=>"Create Nft"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 927)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `nft_id`):
+  
+app/controllers/nfts_controller.rb:30:in `create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNftIdToNft (20220217233553)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.6ms)[0m  [1m[35mALTER TABLE "nfts" ADD "nft_id" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220217233553"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/nfts" for ::1 at 2022-02-18 10:36:05 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (0.9ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/_nft.html.erb (Duration: 0.3ms | Allocations: 312)
+  Rendered nfts/index.html.erb within layouts/application (Duration: 22.0ms | Allocations: 8373)
+  Rendered layout layouts/application.html.erb (Duration: 68.7ms | Allocations: 73979)
+Completed 200 OK in 79ms (Views: 60.0ms | ActiveRecord: 14.5ms | Allocations: 80655)
+
+
+Started GET "/nfts/new" for ::1 at 2022-02-18 10:36:06 +1100
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 9.5ms | Allocations: 3569)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 10.9ms | Allocations: 3934)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 14032)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms | Allocations: 14581)
+
+
+Started POST "/nfts" for ::1 at 2022-02-18 10:36:10 +1100
+Processing by NftsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nft"=>{"token_link"=>"[FILTERED]", "owner_name"=>"sdsdfw", "wallet_address"=>"weweew"}, "commit"=>"Create Nft"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/nfts_controller.rb:32:in `block in create'
+  [1m[36mNft Create (1.1ms)[0m  [1m[32mINSERT INTO "nfts" ("token_link", "owner_name", "wallet_address", "created_at", "updated_at", "nft_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["token_link", "[FILTERED]"], ["owner_name", "sdsdfw"], ["wallet_address", "weweew"], ["created_at", "2022-02-17 23:36:10.491505"], ["updated_at", "2022-02-17 23:36:10.491505"], ["nft_id", "RCttLF-CLi32XdA9EZ_qPpqlvoics-zItaNPRt0nmco"]]
+  ↳ app/controllers/nfts_controller.rb:32:in `block in create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/nfts_controller.rb:32:in `block in create'
+Redirected to http://localhost:3000/nfts/1
+Completed 302 Found in 10ms (ActiveRecord: 2.0ms | Allocations: 3868)
+
+
+Started GET "/nfts/1" for ::1 at 2022-02-18 10:36:10 +1100
+Processing by NftsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mNft Load (0.6ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" ORDER BY "nfts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ (rdbg)//Users/josh/Documents/Workspace/linkdNFT/app/controllers/nfts_controller.rb:1:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/show.html.erb within layouts/application (Duration: 13.3ms | Allocations: 5704)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 5801)
+Completed 500 Internal Server Error in 38181ms (ActiveRecord: 1.0ms | Allocations: 140090)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <%= render @nft %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this nft", edit_nft_path(@nft) %> |
+  
+app/views/nfts/show.html.erb:3
+Started GET "/nfts/new" for ::1 at 2022-02-18 10:36:52 +1100
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 1.4ms | Allocations: 1354)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1470)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 26396)
+Completed 200 OK in 37ms (Views: 19.0ms | ActiveRecord: 14.4ms | Allocations: 29940)
+
+
+Started POST "/nfts" for ::1 at 2022-02-18 10:36:54 +1100
+Processing by NftsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nft"=>{"token_link"=>"[FILTERED]", "owner_name"=>"", "wallet_address"=>""}, "commit"=>"Create Nft"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/nfts_controller.rb:33:in `block in create'
+  [1m[36mNft Create (0.9ms)[0m  [1m[32mINSERT INTO "nfts" ("token_link", "owner_name", "wallet_address", "created_at", "updated_at", "nft_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["token_link", "[FILTERED]"], ["owner_name", ""], ["wallet_address", ""], ["created_at", "2022-02-17 23:37:12.689862"], ["updated_at", "2022-02-17 23:37:12.689862"], ["nft_id", "X8DEEIEiHLTyo9lYsn9mUMKpT_67fKimeB-9T3WcndA"]]
+  ↳ app/controllers/nfts_controller.rb:33:in `block in create'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/nfts_controller.rb:33:in `block in create'
+Redirected to http://localhost:3000/nfts/2
+Completed 302 Found in 18670ms (ActiveRecord: 2.7ms | Allocations: 107651)
+
+
+Started GET "/nfts/2" for ::1 at 2022-02-18 10:37:12 +1100
+Processing by NftsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mNft Load (0.5ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" ORDER BY "nfts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ (rdbg)//Users/josh/Documents/Workspace/linkdNFT/app/controllers/nfts_controller.rb:1:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1125)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1207)
+Completed 500 Internal Server Error in 34864ms (ActiveRecord: 0.5ms | Allocations: 77561)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <%= render @nft %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this nft", edit_nft_path(@nft) %> |
+  
+app/views/nfts/show.html.erb:3
+Started GET "/nfts/new" for ::1 at 2022-02-18 10:37:49 +1100
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 1.1ms | Allocations: 1339)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1455)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 26380)
+Completed 200 OK in 29ms (Views: 13.7ms | ActiveRecord: 12.2ms | Allocations: 29929)
+
+
+Started POST "/nfts" for ::1 at 2022-02-18 10:37:50 +1100
+Processing by NftsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nft"=>{"token_link"=>"[FILTERED]", "owner_name"=>"", "wallet_address"=>""}, "commit"=>"Create Nft"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ (rdbg)//Users/josh/Documents/Workspace/linkdNFT/app/controllers/nfts_controller.rb:1:in `create'
+  [1m[36mNft Create (0.7ms)[0m  [1m[32mINSERT INTO "nfts" ("token_link", "owner_name", "wallet_address", "created_at", "updated_at", "nft_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["token_link", "[FILTERED]"], ["owner_name", ""], ["wallet_address", ""], ["created_at", "2022-02-17 23:38:01.631971"], ["updated_at", "2022-02-17 23:38:01.631971"], ["nft_id", "7ar_2K_-oBaI7HDYw8qz6jzDotn23UZh5CjpoJSxp_c"]]
+  ↳ (rdbg)//Users/josh/Documents/Workspace/linkdNFT/app/controllers/nfts_controller.rb:1:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ (rdbg)//Users/josh/Documents/Workspace/linkdNFT/app/controllers/nfts_controller.rb:1:in `create'
+  [1m[36mNft Load (0.9ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" ORDER BY "nfts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ (rdbg)//Users/josh/Documents/Workspace/linkdNFT/app/controllers/nfts_controller.rb:1:in `create'
+Redirected to http://localhost:3000/nfts/3
+Completed 302 Found in 28267ms (ActiveRecord: 3.2ms | Allocations: 108431)
+
+
+Started GET "/nfts/3" for ::1 at 2022-02-18 10:38:19 +1100
+Processing by NftsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1140)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1223)
+Completed 500 Internal Server Error in 1039ms (ActiveRecord: 0.0ms | Allocations: 56350)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <%= render @nft %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this nft", edit_nft_path(@nft) %> |
+  
+app/views/nfts/show.html.erb:3
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNftIdToNft (20220217233553)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "nfts" DROP COLUMN "nft_id"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20220217233553"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNfts (20220217233135)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.1ms)[0m  [1m[35mDROP TABLE "nfts"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20220217233135"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNftIdToNft (20220217233553)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "nfts" ADD "nft_id" character varying[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNfts (20220217233848)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "nfts" ("id" bigserial primary key, "token_link" character varying, "owner_name" character varying, "wallet_address" character varying, "nft_id" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220217233848"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1160563456764420660)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/nfts/new" for ::1 at 2022-02-18 10:39:43 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 6.1ms | Allocations: 4179)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 8.9ms | Allocations: 4915)
+  Rendered layout layouts/application.html.erb (Duration: 69.2ms | Allocations: 69753)
+Completed 200 OK in 98ms (Views: 71.4ms | ActiveRecord: 13.6ms | Allocations: 82012)
+
+
+Started POST "/nfts" for ::1 at 2022-02-18 10:39:45 +1100
+Processing by NftsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nft"=>{"token_link"=>"[FILTERED]", "owner_name"=>"", "wallet_address"=>"", "nft_id"=>""}, "commit"=>"Create Nft"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ (rdbg)//Users/josh/Documents/Workspace/linkdNFT/app/controllers/nfts_controller.rb:1:in `create'
+  [1m[36mNft Create (4.0ms)[0m  [1m[32mINSERT INTO "nfts" ("token_link", "owner_name", "wallet_address", "nft_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["token_link", "[FILTERED]"], ["owner_name", ""], ["wallet_address", ""], ["nft_id", "gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU"], ["created_at", "2022-02-17 23:39:57.579974"], ["updated_at", "2022-02-17 23:39:57.579974"]]
+  ↳ (rdbg)//Users/josh/Documents/Workspace/linkdNFT/app/controllers/nfts_controller.rb:1:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ (rdbg)//Users/josh/Documents/Workspace/linkdNFT/app/controllers/nfts_controller.rb:1:in `create'
+  [1m[36mNft Load (0.7ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" ORDER BY "nfts"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ (rdbg)//Users/josh/Documents/Workspace/linkdNFT/app/controllers/nfts_controller.rb:1:in `create'
+Redirected to http://localhost:3000/nfts/1
+Completed 302 Found in 21643ms (ActiveRecord: 6.4ms | Allocations: 156267)
+
+
+Started GET "/nfts/1" for ::1 at 2022-02-18 10:40:06 +1100
+Processing by NftsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/show.html.erb within layouts/application (Duration: 14.3ms | Allocations: 5989)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 6086)
+Completed 500 Internal Server Error in 6234ms (ActiveRecord: 0.0ms | Allocations: 64435)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <%= render @nft %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this nft", edit_nft_path(@nft) %> |
+  
+app/views/nfts/show.html.erb:3
+Started GET "/nfts/gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU" for ::1 at 2022-02-18 10:40:51 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU"}
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1171)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1254)
+Completed 500 Internal Server Error in 44124ms (ActiveRecord: 0.0ms | Allocations: 58450)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <%= render @nft %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this nft", edit_nft_path(@nft) %> |
+  
+app/views/nfts/show.html.erb:3
+Started GET "/nfts/gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU" for ::1 at 2022-02-18 10:41:39 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU"}
+  [1m[36mNft Load (0.5ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU"], ["LIMIT", 1]]
+  ↳ (rdbg)//Users/josh/Documents/Workspace/linkdNFT/app/controllers/nfts_controller.rb:1:in `show'
+  [1m[36mCACHE Nft Load (0.1ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU"], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:15:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/_nft.html.erb (Duration: 1.0ms | Allocations: 321)
+  Rendered nfts/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1189)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 26102)
+Completed 200 OK in 6576ms (Views: 26.3ms | ActiveRecord: 19.3ms | Allocations: 112451)
+
+
+Started GET "/nfts/1" for ::1 at 2022-02-18 10:43:30 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNft Load (0.7ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:15:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1092)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1174)
+Completed 500 Internal Server Error in 2211ms (ActiveRecord: 0.7ms | Allocations: 56420)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <%= render @nft %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this nft", edit_nft_path(@nft) %> |
+  
+app/views/nfts/show.html.erb:3
+Started GET "/nfts/1" for ::1 at 2022-02-18 10:43:42 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mNft Load (0.3ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "1"], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1206)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 1294)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 3.9ms | Allocations: 4200)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <%= render @nft %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this nft", edit_nft_path(@nft) %> |
+  
+app/views/nfts/show.html.erb:3
+Started GET "/nfts/gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU" for ::1 at 2022-02-18 10:45:31 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU"}
+  [1m[36mNft Load (0.4ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU"], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/_nft.html.erb (Duration: 0.4ms | Allocations: 241)
+  Rendered nfts/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 639)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 26159)
+Completed 200 OK in 43ms (Views: 22.3ms | ActiveRecord: 15.0ms | Allocations: 30885)
+
+
+Started GET "/nfts/gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU" for ::1 at 2022-02-18 10:45:34 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU"}
+  [1m[36mNft Load (0.4ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU"], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered nfts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 114)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 10249)
+Completed 200 OK in 22ms (Views: 18.2ms | ActiveRecord: 0.4ms | Allocations: 11177)
+
+
+Started GET "/nfts/gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU" for ::1 at 2022-02-18 10:45:34 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU"}
+  [1m[36mNft Load (0.3ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU"], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered nfts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 114)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 10247)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.3ms | Allocations: 11106)
+
+
+Started GET "/nfts/new" for ::1 at 2022-02-18 10:45:40 +1100
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 4.6ms | Allocations: 1604)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1936)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 11885)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 12296)
+
+
+Started POST "/nfts" for ::1 at 2022-02-18 10:45:43 +1100
+Processing by NftsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nft"=>{"token_link"=>"[FILTERED]", "owner_name"=>"werwer", "wallet_address"=>"werwer"}, "commit"=>"Create Nft"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/nfts_controller.rb:32:in `block in create'
+  [1m[36mNft Create (0.5ms)[0m  [1m[32mINSERT INTO "nfts" ("token_link", "owner_name", "wallet_address", "nft_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["token_link", "[FILTERED]"], ["owner_name", "werwer"], ["wallet_address", "werwer"], ["nft_id", "JCM7QM6TkB1QiFNnlDPq_gtVGYkMrRvXF6PyZHS10dI"], ["created_at", "2022-02-17 23:45:53.517163"], ["updated_at", "2022-02-17 23:45:53.517163"]]
+  ↳ app/controllers/nfts_controller.rb:32:in `block in create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/nfts_controller.rb:32:in `block in create'
+Redirected to http://localhost:3000/nfts/2
+Completed 302 Found in 9546ms (ActiveRecord: 1.6ms | Allocations: 74241)
+
+
+Started GET "/nfts/2" for ::1 at 2022-02-18 10:45:53 +1100
+Processing by NftsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mNft Load (0.2ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "2"], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 984)
+  Rendered layout layouts/application.html.erb (Duration: 0.2ms | Allocations: 1067)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms | Allocations: 1926)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <h1> This is your NFT </h1>
+    2: 
+    3: <%= render @nft %>
+  
+app/views/nfts/show.html.erb:3
+Started GET "/nfts/new" for ::1 at 2022-02-18 10:46:48 +1100
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 1.6ms | Allocations: 1312)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1428)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 26353)
+Completed 200 OK in 32ms (Views: 16.7ms | ActiveRecord: 10.8ms | Allocations: 29881)
+
+
+Started POST "/nfts" for ::1 at 2022-02-18 10:46:50 +1100
+Processing by NftsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nft"=>{"token_link"=>"[FILTERED]", "owner_name"=>"", "wallet_address"=>""}, "commit"=>"Create Nft"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/nfts_controller.rb:31:in `block in create'
+  [1m[36mNft Create (0.7ms)[0m  [1m[32mINSERT INTO "nfts" ("token_link", "owner_name", "wallet_address", "nft_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["token_link", "[FILTERED]"], ["owner_name", ""], ["wallet_address", ""], ["nft_id", "dthl7RfalRzXV_04UWXFKrVs2_kbUkexjl8sqkaRPOw"], ["created_at", "2022-02-17 23:46:50.185832"], ["updated_at", "2022-02-17 23:46:50.185832"]]
+  ↳ app/controllers/nfts_controller.rb:31:in `block in create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/nfts_controller.rb:31:in `block in create'
+Redirected to http://localhost:3000/nfts/3
+Completed 302 Found in 10ms (ActiveRecord: 2.2ms | Allocations: 2676)
+
+
+Started GET "/nfts/3" for ::1 at 2022-02-18 10:46:50 +1100
+Processing by NftsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mNft Load (0.2ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "3"], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 989)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 1071)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms | Allocations: 2169)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <h1> This is your NFT </h1>
+    2: 
+    3: <%= render @nft %>
+  
+app/views/nfts/show.html.erb:3
+Started GET "/nfts/new" for ::1 at 2022-02-18 10:47:11 +1100
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 0.9ms | Allocations: 1339)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1455)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 26418)
+Completed 200 OK in 39ms (Views: 20.4ms | ActiveRecord: 15.5ms | Allocations: 29968)
+
+
+Started POST "/nfts" for ::1 at 2022-02-18 10:47:12 +1100
+Processing by NftsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nft"=>{"token_link"=>"[FILTERED]", "owner_name"=>"", "wallet_address"=>""}, "commit"=>"Create Nft"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/nfts_controller.rb:32:in `block in create'
+  [1m[36mNft Create (0.5ms)[0m  [1m[32mINSERT INTO "nfts" ("token_link", "owner_name", "wallet_address", "nft_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["token_link", "[FILTERED]"], ["owner_name", ""], ["wallet_address", ""], ["nft_id", "eKchqC9rKpgf20cfLjTQpW-bt2FSWRwgh35GrkkvY8w"], ["created_at", "2022-02-17 23:47:12.441246"], ["updated_at", "2022-02-17 23:47:12.441246"]]
+  ↳ app/controllers/nfts_controller.rb:32:in `block in create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/nfts_controller.rb:32:in `block in create'
+Redirected to http://localhost:3000/nfts/4
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms | Allocations: 2674)
+
+
+Started GET "/nfts/4" for ::1 at 2022-02-18 10:47:12 +1100
+Processing by NftsController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mNft Load (0.5ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "4"], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:15:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 916)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 998)
+Completed 500 Internal Server Error in 30780ms (ActiveRecord: 0.5ms | Allocations: 71822)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <h1> This is your NFT </h1>
+    2: 
+    3: <%= render @nft %>
+  
+app/views/nfts/show.html.erb:3
+Started GET "/nfts/new" for ::1 at 2022-02-18 10:47:44 +1100
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 1.4ms | Allocations: 1339)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1455)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 26381)
+Completed 200 OK in 34ms (Views: 15.2ms | ActiveRecord: 14.8ms | Allocations: 29930)
+
+
+Started POST "/nfts" for ::1 at 2022-02-18 10:47:45 +1100
+Processing by NftsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nft"=>{"token_link"=>"[FILTERED]", "owner_name"=>"", "wallet_address"=>""}, "commit"=>"Create Nft"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/nfts_controller.rb:32:in `block in create'
+  [1m[36mNft Create (0.6ms)[0m  [1m[32mINSERT INTO "nfts" ("token_link", "owner_name", "wallet_address", "nft_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["token_link", "[FILTERED]"], ["owner_name", ""], ["wallet_address", ""], ["nft_id", "O-Lk2OL_QhCYsdLjHyhpVmEsZiiTJFyeXY6qPJ9No04"], ["created_at", "2022-02-17 23:47:45.723562"], ["updated_at", "2022-02-17 23:47:45.723562"]]
+  ↳ app/controllers/nfts_controller.rb:32:in `block in create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/nfts_controller.rb:32:in `block in create'
+Redirected to http://localhost:3000/nfts/O-Lk2OL_QhCYsdLjHyhpVmEsZiiTJFyeXY6qPJ9No04
+Completed 302 Found in 9ms (ActiveRecord: 1.3ms | Allocations: 2651)
+
+
+Started GET "/nfts/O-Lk2OL_QhCYsdLjHyhpVmEsZiiTJFyeXY6qPJ9No04" for ::1 at 2022-02-18 10:47:45 +1100
+Processing by NftsController#show as TURBO_STREAM
+  Parameters: {"id"=>"O-Lk2OL_QhCYsdLjHyhpVmEsZiiTJFyeXY6qPJ9No04"}
+  [1m[36mNft Load (0.5ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "O-Lk2OL_QhCYsdLjHyhpVmEsZiiTJFyeXY6qPJ9No04"], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:15:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/_nft.html.erb (Duration: 0.2ms | Allocations: 36)
+  Rendered nfts/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 233)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 10500)
+Completed 200 OK in 3216ms (Views: 14.4ms | ActiveRecord: 0.5ms | Allocations: 80947)
+
+
+Started GET "/nfts/O-Lk2OL_QhCYsdLjHyhpVmEsZiiTJFyeXY6qPJ9No04" for ::1 at 2022-02-18 10:47:57 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"O-Lk2OL_QhCYsdLjHyhpVmEsZiiTJFyeXY6qPJ9No04"}
+  [1m[36mNft Load (0.2ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "O-Lk2OL_QhCYsdLjHyhpVmEsZiiTJFyeXY6qPJ9No04"], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 53)
+  Rendered nfts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 217)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 25302)
+Completed 200 OK in 33ms (Views: 15.0ms | ActiveRecord: 13.4ms | Allocations: 29689)
+
+
+Started GET "/nfts" for ::1 at 2022-02-18 10:48:02 +1100
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (0.4ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered nfts/_nft.html.erb (Duration: 0.2ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered nfts/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1896)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 11859)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.4ms | Allocations: 12321)
+
+
+Started GET "/nfts/5" for ::1 at 2022-02-18 10:48:05 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mNft Load (0.2ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "5"], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 986)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | Allocations: 1068)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 1904)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <h1> This is your NFT </h1>
+    2: 
+    3: <%= render @nft %>
+  
+app/views/nfts/show.html.erb:3
+Started GET "/nfts" for ::1 at 2022-02-18 10:48:09 +1100
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (0.4ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered nfts/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1481)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 11555)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.4ms | Allocations: 11894)
+
+
+Started GET "/nfts" for ::1 at 2022-02-18 10:48:21 +1100
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (0.5ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/_nft.html.erb (Duration: 0.9ms | Allocations: 234)
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered nfts/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2173)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 12693)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.5ms | Allocations: 13880)
+
+
+Started GET "/nfts" for ::1 at 2022-02-18 10:48:54 +1100
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (0.5ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/_nft.html.erb (Duration: 0.8ms | Allocations: 234)
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered nfts/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 2168)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 12688)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.5ms | Allocations: 13901)
+
+
+Started GET "/eKchqC9rKpgf20cfLjTQpW-bt2FSWRwgh35GrkkvY8w" for ::1 at 2022-02-18 10:48:56 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/eKchqC9rKpgf20cfLjTQpW-bt2FSWRwgh35GrkkvY8w"):
+  
+Started GET "/eKchqC9rKpgf20cfLjTQpW-bt2FSWRwgh35GrkkvY8w" for ::1 at 2022-02-18 10:49:52 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/eKchqC9rKpgf20cfLjTQpW-bt2FSWRwgh35GrkkvY8w"):
+  
+Started GET "/nfts" for ::1 at 2022-02-18 10:49:55 +1100
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (0.5ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/_nft.html.erb (Duration: 1.2ms | Allocations: 234)
+  Rendered nfts/index.html.erb within layouts/application (Duration: 28.4ms | Allocations: 5618)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 5706)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.5ms | Allocations: 6833)
+
+
+  
+ActionView::Template::Error (undefined method `show_nft_path' for #<ActionView::Base:0x0000000002e2e8>
+Did you mean?  new_nft_path):
+     6:   <% @nfts.each do |nft| %>
+     7:     <%= render nft %>
+     8:     <p>
+     9:       <%= link_to "Show this nft", show_nft_path(nft.nft_id) %>
+    10:     </p>
+    11:   <% end %>
+    12: </div>
+  
+app/views/nfts/index.html.erb:9
+app/views/nfts/index.html.erb:6
+Started GET "/nfts" for ::1 at 2022-02-18 10:49:56 +1100
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (0.6ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/_nft.html.erb (Duration: 0.2ms | Allocations: 25)
+  Rendered nfts/index.html.erb within layouts/application (Duration: 28.1ms | Allocations: 4841)
+  Rendered layout layouts/application.html.erb (Duration: 28.4ms | Allocations: 4923)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.6ms | Allocations: 5247)
+
+
+  
+ActionView::Template::Error (undefined method `show_nft_path' for #<ActionView::Base:0x0000000002e5e0>
+Did you mean?  new_nft_path):
+     6:   <% @nfts.each do |nft| %>
+     7:     <%= render nft %>
+     8:     <p>
+     9:       <%= link_to "Show this nft", show_nft_path(nft.nft_id) %>
+    10:     </p>
+    11:   <% end %>
+    12: </div>
+  
+app/views/nfts/index.html.erb:9
+app/views/nfts/index.html.erb:6
+Started PUT "/__web_console/repl_sessions/e1ab7cc21b6c55073afef99079cc3fee" for ::1 at 2022-02-18 10:50:02 +1100
+Started PUT "/__web_console/repl_sessions/e1ab7cc21b6c55073afef99079cc3fee" for ::1 at 2022-02-18 10:50:02 +1100
+Started GET "/nfts" for ::1 at 2022-02-18 10:50:56 +1100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (1.2ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/_nft.html.erb (Duration: 0.2ms | Allocations: 310)
+  Rendered nfts/index.html.erb within layouts/application (Duration: 31.9ms | Allocations: 13027)
+  Rendered layout layouts/application.html.erb (Duration: 32.0ms | Allocations: 13134)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 17.7ms | Allocations: 19753)
+
+
+  
+ActionView::Template::Error (undefined method `my_nft_path' for #<ActionView::Base:0x0000000000bb80>
+Did you mean?  my_nft_path_url):
+     6:   <% @nfts.each do |nft| %>
+     7:     <%= render nft %>
+     8:     <p>
+     9:       <%= link_to "Show this nft", my_nft_path(nft.nft_id) %>
+    10:     </p>
+    11:   <% end %>
+    12: </div>
+  
+app/views/nfts/index.html.erb:9
+app/views/nfts/index.html.erb:6
+Started GET "/nfts" for ::1 at 2022-02-18 10:51:03 +1100
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (0.5ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/_nft.html.erb (Duration: 0.8ms | Allocations: 228)
+  Rendered nfts/_nft.html.erb (Duration: 1.1ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered nfts/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2369)
+  Rendered layout layouts/application.html.erb (Duration: 103.8ms | Allocations: 67470)
+Completed 200 OK in 108ms (Views: 105.8ms | ActiveRecord: 0.5ms | Allocations: 68717)
+
+
+Started GET "/nft/my/gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU" for ::1 at 2022-02-18 10:51:06 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"nft_if"=>"gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU"}
+  [1m[36mNft Load (0.3ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1089)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1174)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms | Allocations: 3638)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <h1> This is your NFT </h1>
+    2: 
+    3: <%= render @nft %>
+  
+app/views/nfts/show.html.erb:3
+Started PUT "/__web_console/repl_sessions/1c5225b4ef31fa7cdd4d90d11f10bea7" for ::1 at 2022-02-18 10:51:12 +1100
+Started PUT "/__web_console/repl_sessions/1c5225b4ef31fa7cdd4d90d11f10bea7" for ::1 at 2022-02-18 10:51:13 +1100
+Started PUT "/__web_console/repl_sessions/1c5225b4ef31fa7cdd4d90d11f10bea7" for ::1 at 2022-02-18 10:51:23 +1100
+Started PUT "/__web_console/repl_sessions/1c5225b4ef31fa7cdd4d90d11f10bea7" for ::1 at 2022-02-18 10:51:25 +1100
+  [1m[36mNft Load (0.4ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU"], ["LIMIT", 1]]
+  ↳ app/views/nfts/show.html.erb:3
+Started GET "/nft/my/gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU" for ::1 at 2022-02-18 10:51:50 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU"}
+  [1m[36mNft Load (0.3ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU"], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 53)
+  Rendered nfts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 217)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 25371)
+Completed 200 OK in 33ms (Views: 16.1ms | ActiveRecord: 12.4ms | Allocations: 29759)
+
+
+Started GET "/nfts" for ::1 at 2022-02-18 10:51:52 +1100
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (0.4ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered nfts/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1653)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 11619)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.4ms | Allocations: 11982)
+
+
+Started GET "/nfts" for ::1 at 2022-02-18 10:51:53 +1100
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (0.8ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered nfts/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1496)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 11458)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.8ms | Allocations: 11796)
+
+
+Started GET "/nft/my/gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU" for ::1 at 2022-02-18 10:51:55 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU"}
+  [1m[36mNft Load (0.3ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "gIBX_gsnGxBjtcQckqEFN0PqxyRw3a4KEz9FCHFodjU"], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered nfts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 114)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 10240)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.3ms | Allocations: 11116)
+
+
+Started GET "/nfts/new" for ::1 at 2022-02-18 10:51:58 +1100
+Processing by NftsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/new.html.erb within layouts/application
+  Rendered nfts/_form.html.erb (Duration: 11.1ms | Allocations: 3574)
+  Rendered nfts/new.html.erb within layouts/application (Duration: 12.5ms | Allocations: 3929)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 13991)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 14479)
+
+
+Started POST "/nfts" for ::1 at 2022-02-18 10:52:01 +1100
+Processing by NftsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "nft"=>{"token_link"=>"[FILTERED]", "owner_name"=>"werfd", "wallet_address"=>""}, "commit"=>"Create Nft"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/nfts_controller.rb:31:in `block in create'
+  [1m[36mNft Create (1.4ms)[0m  [1m[32mINSERT INTO "nfts" ("token_link", "owner_name", "wallet_address", "nft_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["token_link", "[FILTERED]"], ["owner_name", "werfd"], ["wallet_address", ""], ["nft_id", "UQWyvBUY2NE6C0tQB4B4e31oE6W9FQraALwa51bL4hA"], ["created_at", "2022-02-17 23:52:01.444522"], ["updated_at", "2022-02-17 23:52:01.444522"]]
+  ↳ app/controllers/nfts_controller.rb:31:in `block in create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/nfts_controller.rb:31:in `block in create'
+Redirected to http://localhost:3000/nfts/UQWyvBUY2NE6C0tQB4B4e31oE6W9FQraALwa51bL4hA
+Completed 302 Found in 14ms (ActiveRecord: 2.6ms | Allocations: 3718)
+
+
+Started GET "/nfts/UQWyvBUY2NE6C0tQB4B4e31oE6W9FQraALwa51bL4hA" for ::1 at 2022-02-18 10:52:01 +1100
+Processing by NftsController#show as TURBO_STREAM
+  Parameters: {"id"=>"UQWyvBUY2NE6C0tQB4B4e31oE6W9FQraALwa51bL4hA"}
+  [1m[36mNft Load (0.4ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "UQWyvBUY2NE6C0tQB4B4e31oE6W9FQraALwa51bL4hA"], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered nfts/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 176)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 10439)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.4ms | Allocations: 11394)
+
+
+Started GET "/nfts" for ::1 at 2022-02-18 10:52:03 +1100
+Processing by NftsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/index.html.erb within layouts/application
+  [1m[36mNft Load (0.4ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts"[0m
+  ↳ app/views/nfts/index.html.erb:6
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered nfts/_nft.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered nfts/_nft.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered nfts/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1695)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 11657)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.4ms | Allocations: 12000)
+
+
+Started GET "/nft/my/UQWyvBUY2NE6C0tQB4B4e31oE6W9FQraALwa51bL4hA" for ::1 at 2022-02-18 10:52:06 +1100
+Processing by NftsController#show as HTML
+  Parameters: {"id"=>"UQWyvBUY2NE6C0tQB4B4e31oE6W9FQraALwa51bL4hA"}
+  [1m[36mNft Load (0.9ms)[0m  [1m[34mSELECT "nfts".* FROM "nfts" WHERE "nfts"."nft_id" = $1 LIMIT $2[0m  [["nft_id", "UQWyvBUY2NE6C0tQB4B4e31oE6W9FQraALwa51bL4hA"], ["LIMIT", 1]]
+  ↳ app/controllers/nfts_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering nfts/show.html.erb within layouts/application
+  Rendered nfts/_nft.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered nfts/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 114)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 10249)
+Completed 200 OK in 28ms (Views: 18.2ms | ActiveRecord: 0.9ms | Allocations: 11093)
+
+
